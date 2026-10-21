@@ -16,12 +16,14 @@ LAST = ["Kumar", "Nair", "Iyer", "Reddy", "Pillai", "Menon", "Raj", "Das"]
 CITIES = [("Chennai", "Tamil Nadu"), ("Bengaluru", "Karnataka"),
           ("Kochi", "Kerala"), ("Mumbai", "Maharashtra"), ("Nagercoil", "Tamil Nadu")]
 SEGMENTS = ["MASS", "PREMIUM", "BUSINESS"]
+ACCT_TYPES = ["SAVINGS", "CURRENT", "SALARY"]
 
 
 def money(paise):                  # money is stored as integer paise, never float
     return f"{paise / 100:.2f}"
 
 
+# ---------- customers ----------
 customers = {}
 for i in range(1, N_CUSTOMERS + 1):
     cid = f"C{i:06d}"
@@ -35,10 +37,9 @@ for i in range(1, N_CUSTOMERS + 1):
         "segment": rnd.choices(SEGMENTS, [70, 20, 10])[0],
         "updated_at": f"{START} 00:00:00",
     }
-
 print(len(customers), "customers")
 
-ACCT_TYPES = ["SAVINGS", "CURRENT", "SALARY"]
+# ---------- accounts ----------
 accounts = {}
 n = 0
 for cid in customers:
@@ -56,9 +57,9 @@ for cid in customers:
             "updated_at": f"{START} 00:00:00",
             "balance": start_bal,                   # running ledger, internal only
         }
-
 print(len(accounts), "accounts")
 
+# ---------- setup ----------
 # code, direction, min INR, max INR
 TXN_TYPES = [
     ("UPI_IN", "CREDIT", 100, 20000), ("NEFT_IN", "CREDIT", 1000, 80000),
@@ -67,6 +68,9 @@ TXN_TYPES = [
 ]
 TXN_HEADER = ["transaction_id", "account_id", "txn_ts", "posting_date",
               "amount", "direction", "txn_type_code", "status", "source_updated_at"]
+CUST_COLS = list(next(iter(customers.values())).keys())
+ACC_COLS = ["account_id", "customer_id", "account_type", "branch_code",
+            "status", "initial_balance", "updated_at"]
 
 
 def write_csv(path, header, rows):
@@ -81,17 +85,42 @@ tid = 0
 pending = {}     # delivery_date -> late rows waiting to arrive
 truth = []       # log of every defect we plant
 
+# ---------- daily loop ----------
 for day in range(DAYS):
     d = START + timedelta(days=day)
     txn_rows, bal_rows = list(pending.pop(d, [])), []   # late rows arrive today
 
+    # customer and account changes (this is what SCD2 will track)
+    changed_c, changed_a = [], []
+    if day > 0:
+        for cid, c in customers.items():
+            if rnd.random() < 0.01:
+                if rnd.random() < 0.5:
+                    c["city"], c["state"] = rnd.choice(CITIES)
+                else:
+                    c["segment"] = rnd.choice(SEGMENTS)
+                c["updated_at"] = f"{d} {rnd.randint(8, 18):02d}:00:00"
+                changed_c.append(cid)
+        for aid, acc in accounts.items():
+            if rnd.random() < 0.01:
+                if rnd.random() < 0.5:
+                    acc["status"] = "DORMANT" if acc["status"] == "ACTIVE" else "ACTIVE"
+                else:
+                    acc["branch_code"] = f"BR{rnd.randint(1, 10):03d}"
+                acc["updated_at"] = f"{d} {rnd.randint(8, 18):02d}:00:00"
+                changed_a.append(aid)
+
+    # transactions and balances
     for aid, acc in accounts.items():
         opening = acc["balance"]
-        for _ in range(rnd.choices([0, 1, 2, 3], [30, 35, 25, 10])[0]):
+        n_txn = rnd.choices([0, 1, 2, 3], [30, 35, 25, 10])[0]
+        if acc["status"] != "ACTIVE":
+            n_txn = 0                                         # dormant accounts do not transact
+        for _ in range(n_txn):
             code, direction, lo, hi = rnd.choice(TXN_TYPES)
             amt = rnd.randint(lo * 100, hi * 100)
             if direction == "DEBIT" and amt > acc["balance"]:
-                continue                                  # no overdrafts
+                continue                                      # no overdrafts
             tid += 1
             acc["balance"] += amt if direction == "CREDIT" else -amt
             ts = datetime(d.year, d.month, d.day) + timedelta(seconds=rnd.randint(0, 86399))
@@ -133,17 +162,21 @@ for day in range(DAYS):
             truth.append(["BALANCE_DISCREPANCY", aid, d.isoformat(), d.isoformat()])
         bal_rows.append([aid, d.isoformat(), money(opening), money(reported)])
 
+    # write today's batch folder
     bdir = OUT / "raw" / f"batch_date={d.isoformat()}"
     write_csv(bdir / "transactions.csv", TXN_HEADER, txn_rows)
     write_csv(bdir / "daily_balances.csv",
               ["account_id", "business_date", "opening_balance", "closing_balance"], bal_rows)
-    if day == 0:       # first batch = full load of customers and accounts
-        write_csv(bdir / "customers.csv", list(next(iter(customers.values())).keys()),
+    if day == 0:       # first batch = full load
+        write_csv(bdir / "customers.csv", CUST_COLS,
                   [list(c.values()) for c in customers.values()])
-        acc_cols = ["account_id", "customer_id", "account_type", "branch_code",
-                    "status", "initial_balance", "updated_at"]
-        write_csv(bdir / "accounts.csv", acc_cols,
-                  [[a[c] for c in acc_cols] for a in accounts.values()])
+        write_csv(bdir / "accounts.csv", ACC_COLS,
+                  [[a[c] for c in ACC_COLS] for a in accounts.values()])
+    else:              # later batches carry only changed rows
+        write_csv(bdir / "customers.csv", CUST_COLS,
+                  [list(customers[c].values()) for c in changed_c])
+        write_csv(bdir / "accounts.csv", ACC_COLS,
+                  [[accounts[a][c] for c in ACC_COLS] for a in changed_a])
 
 write_csv(OUT / "ground_truth" / "injected_issues.csv",
           ["issue_type", "entity_id", "business_date", "delivery_date"], truth)
