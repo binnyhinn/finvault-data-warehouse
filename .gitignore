@@ -1,0 +1,6 @@
+data/raw/
+data/ground_truth/
+.env
+__pycache__/
+*.pyc
+.venv/
