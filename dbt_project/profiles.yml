@@ -1,0 +1,12 @@
+finvault:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: finvault
+      password: "{{ env_var('POSTGRES_PASSWORD') }}"
+      dbname: finvault
+      schema: gold
+      threads: 4

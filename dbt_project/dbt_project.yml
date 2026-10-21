@@ -1,0 +1,6 @@
+name: finvault
+version: "1.0.0"
+config-version: 2
+profile: finvault
+model-paths: ["models"]
+test-paths: ["tests"]
