@@ -1,0 +1,66 @@
+version: 2
+
+sources:
+  - name: silver
+    schema: silver
+    tables:
+      - name: transactions
+        columns:
+          - name: transaction_id
+            data_tests: [unique, not_null]
+          - name: amount
+            data_tests: [not_null]
+          - name: direction
+            data_tests:
+              - accepted_values:
+                  values: ['CREDIT', 'DEBIT']
+
+  - name: gold
+    schema: gold
+    tables:
+      - name: dim_date
+        columns:
+          - name: date_key
+            data_tests: [unique, not_null]
+      - name: dim_transaction_type
+        columns:
+          - name: txn_type_key
+            data_tests: [unique, not_null]
+      - name: dim_customer
+        columns:
+          - name: customer_key
+            data_tests: [unique, not_null]
+      - name: dim_account
+        columns:
+          - name: account_key
+            data_tests: [unique, not_null]
+      - name: fact_transactions
+        columns:
+          - name: transaction_id
+            data_tests: [unique, not_null]
+          - name: account_key
+            data_tests:
+              - not_null
+              - relationships:
+                  to: source('gold', 'dim_account')
+                  field: account_key
+          - name: customer_key
+            data_tests:
+              - not_null
+              - relationships:
+                  to: source('gold', 'dim_customer')
+                  field: customer_key
+          - name: txn_type_key
+            data_tests:
+              - not_null
+              - relationships:
+                  to: source('gold', 'dim_transaction_type')
+                  field: txn_type_key
+      - name: fact_daily_account_balance
+        columns:
+          - name: account_key
+            data_tests:
+              - not_null
+              - relationships:
+                  to: source('gold', 'dim_account')
+                  field: account_key
