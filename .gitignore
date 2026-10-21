@@ -6,3 +6,6 @@ __pycache__/
 .venv/dbt_project/logs/
 dbt_project/target/
 dbt_project/.user.yml
+dbt_project/logs/
+dbt_project/target/
+dbt_project/.user.yml
