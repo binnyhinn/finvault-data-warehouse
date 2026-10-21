@@ -1662,3 +1662,2469 @@ having count(*) > 1
 [0m16:11:13.575800 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002861333D6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000286158C9090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000286187E7210>]}
 [0m16:11:13.577817 [debug] [MainThread]: Flushing usage events
 [0m16:11:15.554029 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:12:45.317643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F23C59C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F23BA1450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F23C4D910>]}
+
+
+============================== 16:12:45.324678 | a300a29f-6c30-4784-ae41-71092031d97c ==============================
+[0m16:12:45.324678 [info ] [MainThread]: Running with dbt=1.9.11
+[0m16:12:45.324678 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt run --select fact_transactions --full-refresh --profiles-dir .', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\godfr\\OneDrive\\Desktop\\finvault-data-warehouse\\dbt_project\\logs'}
+[0m16:12:45.324678 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m16:12:45.324678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': 'a300a29f-6c30-4784-ae41-71092031d97c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F23CB2E10>]}
+[0m16:12:46.003607 [info ] [MainThread]: State adapter: dbt-state v2.62.3 is enabled
+[0m16:12:46.112257 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a300a29f-6c30-4784-ae41-71092031d97c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F2402ACD0>]}
+[0m16:12:46.175105 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a300a29f-6c30-4784-ae41-71092031d97c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F20D3DA10>]}
+[0m16:12:46.175105 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m16:12:46.542300 [debug] [MainThread]: checksum: 2191bf62271fd478cf28c21ce953ef202bc2236227e4db3dd4cef6b50a0a91d4, vars: {}, profile: , target: , version: 1.9.11
+[0m16:12:46.673784 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m16:12:46.673784 [debug] [MainThread]: Partial parsing: added file: finvault://models\facts\fact_transactions.sql
+[0m16:12:46.953812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a300a29f-6c30-4784-ae41-71092031d97c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F263EC650>]}
+[0m16:12:47.043066 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\manifest.json
+[0m16:12:47.046848 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\semantic_manifest.json
+[0m16:12:47.049371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a300a29f-6c30-4784-ae41-71092031d97c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F26844110>]}
+[0m16:12:47.049371 [info ] [MainThread]: Found 24 data tests, 1 model, 7 sources, 475 macros
+[0m16:12:47.049371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a300a29f-6c30-4784-ae41-71092031d97c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F2640EDD0>]}
+[0m16:12:47.049371 [info ] [MainThread]: 
+[0m16:12:47.049371 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:12:47.049371 [info ] [MainThread]: 
+[0m16:12:47.049371 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:12:49.559916 [debug] [MainThread]: State adapter: Target 'prod' not found in profile 'finvault'. Deferral and dev cloning are disabled
+[0m16:12:50.800965 [debug] [ThreadPool]: Acquiring new postgres connection 'list_finvault'
+[0m16:12:50.824346 [debug] [ThreadPool]: Using postgres connection "list_finvault"
+[0m16:12:50.824346 [debug] [ThreadPool]: On list_finvault: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "connection_name": "list_finvault"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:12:50.828713 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:12:50.867196 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.040 seconds
+[0m16:12:50.872187 [debug] [ThreadPool]: On list_finvault: Close
+[0m16:12:50.875599 [debug] [ThreadPool]: Acquiring new postgres connection 'list_finvault_gold'
+[0m16:12:50.883580 [debug] [ThreadPool]: Using postgres connection "list_finvault_gold"
+[0m16:12:50.885598 [debug] [ThreadPool]: On list_finvault_gold: BEGIN
+[0m16:12:50.885598 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:12:50.895280 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m16:12:50.900732 [debug] [ThreadPool]: Using postgres connection "list_finvault_gold"
+[0m16:12:50.900732 [debug] [ThreadPool]: On list_finvault_gold: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "connection_name": "list_finvault_gold"} */
+select
+      'finvault' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'finvault' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'finvault' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+  
+[0m16:12:50.904536 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.013 seconds
+[0m16:12:50.904536 [debug] [ThreadPool]: On list_finvault_gold: ROLLBACK
+[0m16:12:50.916960 [debug] [ThreadPool]: On list_finvault_gold: Close
+[0m16:12:50.922215 [debug] [MainThread]: Using postgres connection "master"
+[0m16:12:50.922215 [debug] [MainThread]: On master: BEGIN
+[0m16:12:50.922215 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:12:50.938937 [debug] [MainThread]: SQL status: BEGIN in 0.020 seconds
+[0m16:12:50.946409 [debug] [MainThread]: Using postgres connection "master"
+[0m16:12:50.946409 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:12:50.950436 [debug] [MainThread]: SQL status: SELECT 2 in 0.005 seconds
+[0m16:12:50.953677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a300a29f-6c30-4784-ae41-71092031d97c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F26396D10>]}
+[0m16:12:50.955689 [debug] [MainThread]: On master: ROLLBACK
+[0m16:12:50.955689 [debug] [MainThread]: Using postgres connection "master"
+[0m16:12:50.957701 [debug] [MainThread]: On master: BEGIN
+[0m16:12:50.957701 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m16:12:50.957701 [debug] [MainThread]: On master: COMMIT
+[0m16:12:50.957701 [debug] [MainThread]: Using postgres connection "master"
+[0m16:12:50.957701 [debug] [MainThread]: On master: COMMIT
+[0m16:12:50.957701 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m16:12:50.957701 [debug] [MainThread]: On master: Close
+[0m16:12:50.966309 [debug] [Thread-5 (]: Began running node model.finvault.fact_transactions
+[0m16:12:50.966309 [info ] [Thread-5 (]: 1 of 1 START sql incremental model gold.fact_transactions ...................... [RUN]
+[0m16:12:50.966309 [debug] [Thread-5 (]: Acquiring new postgres connection 'model.finvault.fact_transactions'
+[0m16:12:50.966309 [debug] [Thread-5 (]: Began compiling node model.finvault.fact_transactions
+[0m16:12:50.972053 [debug] [Thread-5 (]: State adapter: Prefetching last modified timestamps for 5.0 tables
+[0m16:12:50.986212 [debug] [Thread-5 (]: Writing injected SQL for node "model.finvault.fact_transactions"
+[0m16:12:50.986212 [debug] [Thread-5 (]: Began executing node model.finvault.fact_transactions
+[0m16:12:50.990531 [debug] [drc_0     ]: State adapter: Fetching definition for views: "finvault"."gold"."dim_customer", "finvault"."gold"."dim_transaction_type", "finvault"."gold"."dim_account", "finvault"."silver"."transactions"
+[0m16:12:50.990531 [debug] [drc_0     ]: Acquiring new postgres connection 'fetch_views_0'
+[0m16:12:50.990531 [debug] [drc_0     ]: Using postgres connection "fetch_views_0"
+[0m16:12:50.990531 [debug] [drc_0     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE (schemaname = 'gold' AND viewname IN ('dim_account', 'dim_customer', 'dim_transaction_type')) OR (schemaname = 'silver' AND viewname = 'transactions')
+        
+[0m16:12:50.997143 [debug] [drc_0     ]: Opening a new connection, currently in state init
+[0m16:12:51.038711 [debug] [drc_0     ]: SQL status: SELECT 0 in 0.043 seconds
+[0m16:12:51.041844 [debug] [drc_0     ]: On fetch_views_0: Close
+[0m16:12:51.044938 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."silver"."transactions", "finvault"."gold"."dim_transaction_type", "finvault"."gold"."dim_customer", "finvault"."gold"."fact_transactions", "finvault"."gold"."dim_account"
+[0m16:12:51.044938 [debug] [drc_0     ]: Re-using an available connection from the pool (formerly fetch_views_0, now fetch_last_modified_timestamps_0)
+[0m16:12:51.047949 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:12:51.047949 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."silver"."transactions" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:12:51.049555 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:12:51.063201 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:12:51.063201 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:12:51.063201 [warn ] [Thread-5 (]: State adapter: Runtime error preparing enriched SQL for model 'fact_transactions': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:12:51.121123 [debug] [Thread-5 (]: Writing runtime sql for node "model.finvault.fact_transactions"
+[0m16:12:51.121123 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:12:51.123930 [debug] [Thread-5 (]: On model.finvault.fact_transactions: BEGIN
+[0m16:12:51.123930 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m16:12:51.134317 [debug] [Thread-5 (]: SQL status: BEGIN in 0.012 seconds
+[0m16:12:51.137300 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:12:51.137300 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+
+      
+  
+    
+
+  create  table "finvault"."gold"."fact_transactions__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+select t.transaction_id,
+       to_char(t.posting_date, 'YYYYMMDD')::int as date_key,
+       a.account_key,
+       c.customer_key,
+       tt.txn_type_key,
+       t.txn_ts,
+       t.amount,
+       case when t.status = 'POSTED'
+            then case t.direction when 'CREDIT' then t.amount else -t.amount end
+            else 0 end as signed_amount,
+       t.direction,
+       t.status,
+       (t.status = 'POSTED') as is_posted,
+       t.batch_id
+from "finvault"."silver"."transactions" t
+left join "finvault"."gold"."dim_account" a
+       on a.account_id = t.account_id and t.txn_ts >= a.valid_from and t.txn_ts < a.valid_to
+left join "finvault"."gold"."dim_customer" c
+       on c.customer_id = a.customer_id and t.txn_ts >= c.valid_from and t.txn_ts < c.valid_to
+left join "finvault"."gold"."dim_transaction_type" tt
+       on tt.txn_type_code = t.txn_type_code
+
+  );
+  
+  
+[0m16:12:51.175918 [debug] [Thread-5 (]: SQL status: SELECT 8282 in 0.040 seconds
+[0m16:12:51.183603 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:12:51.183603 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+alter table "finvault"."gold"."fact_transactions" rename to "fact_transactions__dbt_backup"
+[0m16:12:51.190180 [debug] [Thread-5 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m16:12:51.190180 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:12:51.190180 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+alter table "finvault"."gold"."fact_transactions__dbt_tmp" rename to "fact_transactions"
+[0m16:12:51.190180 [debug] [Thread-5 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:12:51.210382 [debug] [Thread-5 (]: On model.finvault.fact_transactions: COMMIT
+[0m16:12:51.210382 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:12:51.212397 [debug] [Thread-5 (]: On model.finvault.fact_transactions: COMMIT
+[0m16:12:51.213411 [debug] [Thread-5 (]: SQL status: COMMIT in 0.006 seconds
+[0m16:12:51.218931 [debug] [Thread-5 (]: Applying DROP to: "finvault"."gold"."fact_transactions__dbt_backup"
+[0m16:12:51.229148 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:12:51.230264 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+drop table if exists "finvault"."gold"."fact_transactions__dbt_backup" cascade
+[0m16:12:51.245015 [debug] [Thread-5 (]: SQL status: DROP TABLE in 0.016 seconds
+[0m16:12:51.245015 [debug] [Thread-5 (]: State adapter: Cleared "finvault"."gold"."fact_transactions" from cache
+[0m16:12:51.245015 [debug] [Thread-5 (]: On model.finvault.fact_transactions: Close
+[0m16:12:51.253726 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a300a29f-6c30-4784-ae41-71092031d97c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F263B15D0>]}
+[0m16:12:51.253726 [info ] [Thread-5 (]: 1 of 1 OK created sql incremental model gold.fact_transactions ................. [[32mSELECT 8282[0m in 0.28s]
+[0m16:12:51.253726 [debug] [Thread-5 (]: Finished running node model.finvault.fact_transactions
+[0m16:12:51.253726 [debug] [MainThread]: Using postgres connection "master"
+[0m16:12:51.253726 [debug] [MainThread]: On master: BEGIN
+[0m16:12:51.253726 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:12:51.269670 [debug] [MainThread]: SQL status: BEGIN in 0.013 seconds
+[0m16:12:51.269670 [debug] [MainThread]: On master: COMMIT
+[0m16:12:51.269670 [debug] [MainThread]: Using postgres connection "master"
+[0m16:12:51.269670 [debug] [MainThread]: On master: COMMIT
+[0m16:12:51.269670 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m16:12:51.269670 [debug] [MainThread]: On master: Close
+[0m16:12:51.269670 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:12:51.269670 [debug] [MainThread]: Connection 'list_finvault' was properly closed.
+[0m16:12:51.269670 [debug] [MainThread]: Connection 'list_finvault_gold' was properly closed.
+[0m16:12:51.269670 [debug] [MainThread]: Connection 'model.finvault.fact_transactions' was properly closed.
+[0m16:12:51.269670 [debug] [MainThread]: Connection 'fetch_last_modified_timestamps_0' was properly closed.
+[0m16:12:51.277946 [info ] [MainThread]: 
+[0m16:12:51.277946 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 4.23 seconds (4.23s).
+[0m16:12:51.280508 [debug] [MainThread]: Command end result
+[0m16:12:51.404994 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\manifest.json
+[0m16:12:51.406507 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\semantic_manifest.json
+[0m16:12:51.406507 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\run_results.json
+[0m16:12:51.406507 [info ] [MainThread]: 
+[0m16:12:51.406507 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:12:51.406507 [info ] [MainThread]: 
+[0m16:12:51.406507 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:12:51.406507 [debug] [MainThread]: Command `dbt run` succeeded at 16:12:51.406507 after 6.18 seconds
+[0m16:12:51.406507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F1DA7D810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F2019C4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025F210819D0>]}
+[0m16:12:51.406507 [debug] [MainThread]: Flushing usage events
+[0m16:12:52.633363 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:12:55.233669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200F192B810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200F1830C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200F1904610>]}
+
+
+============================== 16:12:55.233669 | 910f6323-441d-4144-b1c2-deecb24bd2ec ==============================
+[0m16:12:55.233669 [info ] [MainThread]: Running with dbt=1.9.11
+[0m16:12:55.233669 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt run --select fact_transactions --profiles-dir .', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\godfr\\OneDrive\\Desktop\\finvault-data-warehouse\\dbt_project\\logs'}
+[0m16:12:55.233669 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m16:12:55.233669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '910f6323-441d-4144-b1c2-deecb24bd2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200F1904F10>]}
+[0m16:12:55.806451 [info ] [MainThread]: State adapter: dbt-state v2.62.3 is enabled
+[0m16:12:55.886852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '910f6323-441d-4144-b1c2-deecb24bd2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200F1CC7DD0>]}
+[0m16:12:55.928417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '910f6323-441d-4144-b1c2-deecb24bd2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200EE9BFA50>]}
+[0m16:12:55.934654 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m16:12:56.241714 [debug] [MainThread]: checksum: 2191bf62271fd478cf28c21ce953ef202bc2236227e4db3dd4cef6b50a0a91d4, vars: {}, profile: , target: , version: 1.9.11
+[0m16:12:56.346483 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:12:56.346483 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:12:56.378359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '910f6323-441d-4144-b1c2-deecb24bd2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200F44DB810>]}
+[0m16:12:56.458673 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\manifest.json
+[0m16:12:56.458673 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\semantic_manifest.json
+[0m16:12:56.458673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '910f6323-441d-4144-b1c2-deecb24bd2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200F43AFED0>]}
+[0m16:12:56.458673 [info ] [MainThread]: Found 24 data tests, 1 model, 7 sources, 475 macros
+[0m16:12:56.458673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '910f6323-441d-4144-b1c2-deecb24bd2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200EECCCAD0>]}
+[0m16:12:56.458673 [info ] [MainThread]: 
+[0m16:12:56.458673 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:12:56.458673 [info ] [MainThread]: 
+[0m16:12:56.473629 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:12:58.685194 [debug] [MainThread]: State adapter: Target 'prod' not found in profile 'finvault'. Deferral and dev cloning are disabled
+[0m16:13:00.019672 [debug] [ThreadPool]: Acquiring new postgres connection 'list_finvault'
+[0m16:13:00.032679 [debug] [ThreadPool]: Using postgres connection "list_finvault"
+[0m16:13:00.032679 [debug] [ThreadPool]: On list_finvault: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "connection_name": "list_finvault"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:13:00.032679 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:13:00.048800 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.018 seconds
+[0m16:13:00.060363 [debug] [ThreadPool]: On list_finvault: Close
+[0m16:13:00.063259 [debug] [ThreadPool]: Acquiring new postgres connection 'list_finvault_gold'
+[0m16:13:00.069814 [debug] [ThreadPool]: Using postgres connection "list_finvault_gold"
+[0m16:13:00.069814 [debug] [ThreadPool]: On list_finvault_gold: BEGIN
+[0m16:13:00.069814 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:13:00.105943 [debug] [ThreadPool]: SQL status: BEGIN in 0.035 seconds
+[0m16:13:00.105943 [debug] [ThreadPool]: Using postgres connection "list_finvault_gold"
+[0m16:13:00.105943 [debug] [ThreadPool]: On list_finvault_gold: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "connection_name": "list_finvault_gold"} */
+select
+      'finvault' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'finvault' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'finvault' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+  
+[0m16:13:00.105943 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.003 seconds
+[0m16:13:00.112796 [debug] [ThreadPool]: On list_finvault_gold: ROLLBACK
+[0m16:13:00.113911 [debug] [ThreadPool]: On list_finvault_gold: Close
+[0m16:13:00.119710 [debug] [MainThread]: Using postgres connection "master"
+[0m16:13:00.120791 [debug] [MainThread]: On master: BEGIN
+[0m16:13:00.120791 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:13:00.146797 [debug] [MainThread]: SQL status: BEGIN in 0.035 seconds
+[0m16:13:00.146797 [debug] [MainThread]: Using postgres connection "master"
+[0m16:13:00.146797 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:13:00.160361 [debug] [MainThread]: SQL status: SELECT 2 in 0.003 seconds
+[0m16:13:00.160361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '910f6323-441d-4144-b1c2-deecb24bd2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200F4629550>]}
+[0m16:13:00.162750 [debug] [MainThread]: On master: ROLLBACK
+[0m16:13:00.162750 [debug] [MainThread]: Using postgres connection "master"
+[0m16:13:00.162750 [debug] [MainThread]: On master: BEGIN
+[0m16:13:00.162750 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m16:13:00.162750 [debug] [MainThread]: On master: COMMIT
+[0m16:13:00.162750 [debug] [MainThread]: Using postgres connection "master"
+[0m16:13:00.162750 [debug] [MainThread]: On master: COMMIT
+[0m16:13:00.162750 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:13:00.162750 [debug] [MainThread]: On master: Close
+[0m16:13:00.162750 [debug] [Thread-5 (]: Began running node model.finvault.fact_transactions
+[0m16:13:00.162750 [info ] [Thread-5 (]: 1 of 1 START sql incremental model gold.fact_transactions ...................... [RUN]
+[0m16:13:00.162750 [debug] [Thread-5 (]: Acquiring new postgres connection 'model.finvault.fact_transactions'
+[0m16:13:00.162750 [debug] [Thread-5 (]: Began compiling node model.finvault.fact_transactions
+[0m16:13:00.176360 [debug] [Thread-5 (]: State adapter: Prefetching last modified timestamps for 5.0 tables
+[0m16:13:00.190579 [debug] [Thread-5 (]: Writing injected SQL for node "model.finvault.fact_transactions"
+[0m16:13:00.192329 [debug] [Thread-5 (]: Began executing node model.finvault.fact_transactions
+[0m16:13:00.199712 [debug] [drc_0     ]: State adapter: Fetching definition for views: "finvault"."gold"."dim_customer", "finvault"."gold"."dim_transaction_type", "finvault"."silver"."transactions", "finvault"."gold"."dim_account", "finvault"."gold"."fact_transactions"
+[0m16:13:00.199712 [debug] [drc_0     ]: Acquiring new postgres connection 'fetch_views_0'
+[0m16:13:00.200722 [debug] [drc_0     ]: Using postgres connection "fetch_views_0"
+[0m16:13:00.200722 [debug] [drc_0     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE (schemaname = 'gold' AND viewname IN ('dim_account', 'dim_customer', 'dim_transaction_type', 'fact_transactions')) OR (schemaname = 'silver' AND viewname = 'transactions')
+        
+[0m16:13:00.200722 [debug] [drc_0     ]: Opening a new connection, currently in state init
+[0m16:13:00.213581 [debug] [drc_0     ]: SQL status: SELECT 0 in 0.011 seconds
+[0m16:13:00.214978 [debug] [drc_0     ]: On fetch_views_0: Close
+[0m16:13:00.217776 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."dim_account", "finvault"."silver"."transactions", "finvault"."gold"."fact_transactions", "finvault"."gold"."dim_customer", "finvault"."gold"."dim_transaction_type"
+[0m16:13:00.217776 [debug] [drc_0     ]: Re-using an available connection from the pool (formerly fetch_views_0, now fetch_last_modified_timestamps_0)
+[0m16:13:00.220164 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:13:00.221931 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."dim_account" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:13:00.221931 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:13:00.230292 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:13:00.230292 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:13:00.230292 [warn ] [Thread-5 (]: State adapter: Runtime error preparing enriched SQL for model 'fact_transactions': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:13:00.289882 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:13:00.290862 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+
+    
+  
+    
+
+  create temporary table "fact_transactions__dbt_tmp161300254498"
+  
+  
+    as
+  
+  (
+    
+
+select t.transaction_id,
+       to_char(t.posting_date, 'YYYYMMDD')::int as date_key,
+       a.account_key,
+       c.customer_key,
+       tt.txn_type_key,
+       t.txn_ts,
+       t.amount,
+       case when t.status = 'POSTED'
+            then case t.direction when 'CREDIT' then t.amount else -t.amount end
+            else 0 end as signed_amount,
+       t.direction,
+       t.status,
+       (t.status = 'POSTED') as is_posted,
+       t.batch_id
+from "finvault"."silver"."transactions" t
+left join "finvault"."gold"."dim_account" a
+       on a.account_id = t.account_id and t.txn_ts >= a.valid_from and t.txn_ts < a.valid_to
+left join "finvault"."gold"."dim_customer" c
+       on c.customer_id = a.customer_id and t.txn_ts >= c.valid_from and t.txn_ts < c.valid_to
+left join "finvault"."gold"."dim_transaction_type" tt
+       on tt.txn_type_code = t.txn_type_code
+
+where t.batch_id > (select coalesce(max(batch_id), 0) from "finvault"."gold"."fact_transactions")
+
+  );
+  
+  
+[0m16:13:00.293434 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m16:13:00.332937 [debug] [Thread-5 (]: SQL status: SELECT 0 in 0.040 seconds
+[0m16:13:00.343904 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:13:00.343904 [debug] [Thread-5 (]: On model.finvault.fact_transactions: BEGIN
+[0m16:13:00.349776 [debug] [Thread-5 (]: SQL status: BEGIN in 0.001 seconds
+[0m16:13:00.349776 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:13:00.349776 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_transactions__dbt_tmp161300254498'
+        
+      order by ordinal_position
+
+  
+[0m16:13:00.369970 [debug] [Thread-5 (]: SQL status: SELECT 12 in 0.020 seconds
+[0m16:13:00.374555 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:13:00.374555 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "finvault".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_transactions'
+        
+        and table_schema = 'gold'
+        
+      order by ordinal_position
+
+  
+[0m16:13:00.379179 [debug] [Thread-5 (]: SQL status: SELECT 12 in 0.003 seconds
+[0m16:13:00.381190 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:13:00.387680 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "finvault".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_transactions'
+        
+        and table_schema = 'gold'
+        
+      order by ordinal_position
+
+  
+[0m16:13:00.390445 [debug] [Thread-5 (]: SQL status: SELECT 12 in 0.003 seconds
+[0m16:13:00.390445 [debug] [Thread-5 (]: Writing runtime sql for node "model.finvault.fact_transactions"
+[0m16:13:00.390445 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:13:00.390445 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+
+      
+        
+        
+        delete from "finvault"."gold"."fact_transactions" as DBT_INTERNAL_DEST
+        where (transaction_id) in (
+            select distinct transaction_id
+            from "fact_transactions__dbt_tmp161300254498" as DBT_INTERNAL_SOURCE
+        );
+
+    
+
+    insert into "finvault"."gold"."fact_transactions" ("transaction_id", "date_key", "account_key", "customer_key", "txn_type_key", "txn_ts", "amount", "signed_amount", "direction", "status", "is_posted", "batch_id")
+    (
+        select "transaction_id", "date_key", "account_key", "customer_key", "txn_type_key", "txn_ts", "amount", "signed_amount", "direction", "status", "is_posted", "batch_id"
+        from "fact_transactions__dbt_tmp161300254498"
+    )
+  
+[0m16:13:00.407398 [debug] [Thread-5 (]: SQL status: INSERT 0 0 in 0.003 seconds
+[0m16:13:00.417637 [debug] [Thread-5 (]: On model.finvault.fact_transactions: COMMIT
+[0m16:13:00.420509 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:13:00.420509 [debug] [Thread-5 (]: On model.finvault.fact_transactions: COMMIT
+[0m16:13:00.422025 [debug] [Thread-5 (]: SQL status: COMMIT in 0.003 seconds
+[0m16:13:00.426034 [debug] [Thread-5 (]: State adapter: Cleared "finvault"."gold"."fact_transactions" from cache
+[0m16:13:00.426034 [debug] [Thread-5 (]: On model.finvault.fact_transactions: Close
+[0m16:13:00.426034 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '910f6323-441d-4144-b1c2-deecb24bd2ec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200F476B450>]}
+[0m16:13:00.426034 [info ] [Thread-5 (]: 1 of 1 OK created sql incremental model gold.fact_transactions ................. [[32mINSERT 0 0[0m in 0.26s]
+[0m16:13:00.426034 [debug] [Thread-5 (]: Finished running node model.finvault.fact_transactions
+[0m16:13:00.426034 [debug] [MainThread]: Using postgres connection "master"
+[0m16:13:00.436790 [debug] [MainThread]: On master: BEGIN
+[0m16:13:00.436790 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:13:00.447321 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m16:13:00.447321 [debug] [MainThread]: On master: COMMIT
+[0m16:13:00.447321 [debug] [MainThread]: Using postgres connection "master"
+[0m16:13:00.447321 [debug] [MainThread]: On master: COMMIT
+[0m16:13:00.455926 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m16:13:00.455926 [debug] [MainThread]: On master: Close
+[0m16:13:00.457390 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:13:00.458545 [debug] [MainThread]: Connection 'list_finvault' was properly closed.
+[0m16:13:00.459494 [debug] [MainThread]: Connection 'list_finvault_gold' was properly closed.
+[0m16:13:00.459494 [debug] [MainThread]: Connection 'model.finvault.fact_transactions' was properly closed.
+[0m16:13:00.459494 [debug] [MainThread]: Connection 'fetch_last_modified_timestamps_0' was properly closed.
+[0m16:13:00.459494 [info ] [MainThread]: 
+[0m16:13:00.462002 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 4.00 seconds (4.00s).
+[0m16:13:00.463460 [debug] [MainThread]: Command end result
+[0m16:13:00.485908 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\manifest.json
+[0m16:13:00.488643 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\semantic_manifest.json
+[0m16:13:00.493880 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\run_results.json
+[0m16:13:00.494410 [info ] [MainThread]: 
+[0m16:13:00.496050 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:13:00.496887 [info ] [MainThread]: 
+[0m16:13:00.498042 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:13:00.500527 [debug] [MainThread]: Command `dbt run` succeeded at 16:13:00.499978 after 5.34 seconds
+[0m16:13:00.501093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200F1821450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200EB673A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200EB672710>]}
+[0m16:13:00.501636 [debug] [MainThread]: Flushing usage events
+[0m16:13:01.963267 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:13:57.275207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002589FF24C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002589FEF9350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002589FB34B90>]}
+
+
+============================== 16:13:57.275207 | 504e1339-ba36-4388-84ad-4a9e382602f6 ==============================
+[0m16:13:57.275207 [info ] [MainThread]: Running with dbt=1.9.11
+[0m16:13:57.291468 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select fact_transactions --profiles-dir .', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\godfr\\OneDrive\\Desktop\\finvault-data-warehouse\\dbt_project\\logs'}
+[0m16:13:57.291977 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m16:13:57.291977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': '504e1339-ba36-4388-84ad-4a9e382602f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002589FF4B390>]}
+[0m16:13:57.861537 [info ] [MainThread]: State adapter: dbt-state v2.62.3 is enabled
+[0m16:13:57.945013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '504e1339-ba36-4388-84ad-4a9e382602f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258A02DAB50>]}
+[0m16:13:58.001474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '504e1339-ba36-4388-84ad-4a9e382602f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002589CFCFD90>]}
+[0m16:13:58.001474 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m16:13:58.281787 [debug] [MainThread]: checksum: 2191bf62271fd478cf28c21ce953ef202bc2236227e4db3dd4cef6b50a0a91d4, vars: {}, profile: , target: , version: 1.9.11
+[0m16:13:58.397994 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:13:58.397994 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:13:58.446212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '504e1339-ba36-4388-84ad-4a9e382602f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258A2693ED0>]}
+[0m16:13:58.524712 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\manifest.json
+[0m16:13:58.525216 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\semantic_manifest.json
+[0m16:13:58.529602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '504e1339-ba36-4388-84ad-4a9e382602f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258A29CFBD0>]}
+[0m16:13:58.529602 [info ] [MainThread]: Found 24 data tests, 1 model, 7 sources, 475 macros
+[0m16:13:58.529602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '504e1339-ba36-4388-84ad-4a9e382602f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002589D2DCDD0>]}
+[0m16:13:58.529602 [info ] [MainThread]: 
+[0m16:13:58.529602 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:13:58.529602 [info ] [MainThread]: 
+[0m16:13:58.529602 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:14:03.063830 [debug] [MainThread]: State adapter: Target 'prod' not found in profile 'finvault'. Deferral and dev cloning are disabled
+[0m16:14:04.316060 [debug] [ThreadPool]: Acquiring new postgres connection 'list_finvault'
+[0m16:14:04.351178 [debug] [ThreadPool]: Using postgres connection "list_finvault"
+[0m16:14:04.351178 [debug] [ThreadPool]: On list_finvault: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "connection_name": "list_finvault"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:14:04.351178 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:14:04.379691 [debug] [ThreadPool]: SQL status: SELECT 10 in 0.030 seconds
+[0m16:14:04.395474 [debug] [ThreadPool]: On list_finvault: Close
+[0m16:14:04.397866 [debug] [ThreadPool]: Acquiring new postgres connection 'list_finvault_gold'
+[0m16:14:04.405201 [debug] [ThreadPool]: Using postgres connection "list_finvault_gold"
+[0m16:14:04.405201 [debug] [ThreadPool]: On list_finvault_gold: BEGIN
+[0m16:14:04.406878 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:14:04.417970 [debug] [ThreadPool]: SQL status: BEGIN in 0.011 seconds
+[0m16:14:04.417970 [debug] [ThreadPool]: Using postgres connection "list_finvault_gold"
+[0m16:14:04.417970 [debug] [ThreadPool]: On list_finvault_gold: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "connection_name": "list_finvault_gold"} */
+select
+      'finvault' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'finvault' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'finvault' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+  
+[0m16:14:04.417970 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.002 seconds
+[0m16:14:04.417970 [debug] [ThreadPool]: On list_finvault_gold: ROLLBACK
+[0m16:14:04.417970 [debug] [ThreadPool]: On list_finvault_gold: Close
+[0m16:14:04.428940 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:04.428940 [debug] [MainThread]: On master: BEGIN
+[0m16:14:04.428940 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:14:04.428940 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m16:14:04.428940 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:04.428940 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:14:04.428940 [debug] [MainThread]: SQL status: SELECT 2 in 0.002 seconds
+[0m16:14:04.443496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '504e1339-ba36-4388-84ad-4a9e382602f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258A2C6B810>]}
+[0m16:14:04.443496 [debug] [MainThread]: On master: ROLLBACK
+[0m16:14:04.443496 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:04.443496 [debug] [MainThread]: On master: BEGIN
+[0m16:14:04.443496 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m16:14:04.443496 [debug] [MainThread]: On master: COMMIT
+[0m16:14:04.443496 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:04.443496 [debug] [MainThread]: On master: COMMIT
+[0m16:14:04.443496 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:14:04.443496 [debug] [MainThread]: On master: Close
+[0m16:14:04.461754 [debug] [Thread-5 (]: Began running node model.finvault.fact_transactions
+[0m16:14:04.461754 [info ] [Thread-5 (]: 1 of 1 START sql incremental model gold.fact_transactions ...................... [RUN]
+[0m16:14:04.461754 [debug] [Thread-5 (]: Acquiring new postgres connection 'model.finvault.fact_transactions'
+[0m16:14:04.461754 [debug] [Thread-5 (]: Began compiling node model.finvault.fact_transactions
+[0m16:14:04.461754 [debug] [Thread-5 (]: State adapter: Prefetching last modified timestamps for 5.0 tables
+[0m16:14:04.483015 [debug] [Thread-5 (]: Writing injected SQL for node "model.finvault.fact_transactions"
+[0m16:14:04.483015 [debug] [Thread-5 (]: Began executing node model.finvault.fact_transactions
+[0m16:14:04.489263 [debug] [drc_0     ]: State adapter: Fetching definition for views: "finvault"."gold"."dim_customer", "finvault"."gold"."fact_transactions", "finvault"."gold"."dim_account", "finvault"."gold"."dim_transaction_type", "finvault"."silver"."transactions"
+[0m16:14:04.489574 [debug] [drc_0     ]: Acquiring new postgres connection 'fetch_views_0'
+[0m16:14:04.490234 [debug] [drc_0     ]: Using postgres connection "fetch_views_0"
+[0m16:14:04.490745 [debug] [drc_0     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE (schemaname = 'gold' AND viewname IN ('dim_account', 'dim_customer', 'dim_transaction_type', 'fact_transactions')) OR (schemaname = 'silver' AND viewname = 'transactions')
+        
+[0m16:14:04.490745 [debug] [drc_0     ]: Opening a new connection, currently in state init
+[0m16:14:04.503587 [debug] [drc_0     ]: SQL status: SELECT 0 in 0.012 seconds
+[0m16:14:04.503587 [debug] [drc_0     ]: On fetch_views_0: Close
+[0m16:14:04.503587 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."silver"."transactions", "finvault"."gold"."fact_transactions", "finvault"."gold"."dim_account", "finvault"."gold"."dim_customer", "finvault"."gold"."dim_transaction_type"
+[0m16:14:04.503587 [debug] [drc_0     ]: Re-using an available connection from the pool (formerly fetch_views_0, now fetch_last_modified_timestamps_0)
+[0m16:14:04.503587 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:04.503587 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."silver"."transactions" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:04.503587 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:14:04.519983 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:04.519983 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:04.519983 [warn ] [Thread-5 (]: State adapter: Runtime error preparing enriched SQL for model 'fact_transactions': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:04.568034 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:14:04.568034 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+
+    
+  
+    
+
+  create temporary table "fact_transactions__dbt_tmp161404546135"
+  
+  
+    as
+  
+  (
+    
+
+select t.transaction_id,
+       to_char(t.posting_date, 'YYYYMMDD')::int as date_key,
+       a.account_key,
+       c.customer_key,
+       tt.txn_type_key,
+       t.txn_ts,
+       t.amount,
+       case when t.status = 'POSTED'
+            then case t.direction when 'CREDIT' then t.amount else -t.amount end
+            else 0 end as signed_amount,
+       t.direction,
+       t.status,
+       (t.status = 'POSTED') as is_posted,
+       t.batch_id
+from "finvault"."silver"."transactions" t
+left join "finvault"."gold"."dim_account" a
+       on a.account_id = t.account_id and t.txn_ts >= a.valid_from and t.txn_ts < a.valid_to
+left join "finvault"."gold"."dim_customer" c
+       on c.customer_id = a.customer_id and t.txn_ts >= c.valid_from and t.txn_ts < c.valid_to
+left join "finvault"."gold"."dim_transaction_type" tt
+       on tt.txn_type_code = t.txn_type_code
+
+where t.batch_id > (select coalesce(max(batch_id), 0) from "finvault"."gold"."fact_transactions")
+
+  );
+  
+  
+[0m16:14:04.568034 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m16:14:04.584940 [debug] [Thread-5 (]: SQL status: SELECT 506 in 0.017 seconds
+[0m16:14:04.592627 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:14:04.592627 [debug] [Thread-5 (]: On model.finvault.fact_transactions: BEGIN
+[0m16:14:04.592627 [debug] [Thread-5 (]: SQL status: BEGIN in 0.001 seconds
+[0m16:14:04.592627 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:14:04.600717 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_transactions__dbt_tmp161404546135'
+        
+      order by ordinal_position
+
+  
+[0m16:14:04.600717 [debug] [Thread-5 (]: SQL status: SELECT 12 in 0.005 seconds
+[0m16:14:04.600717 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:14:04.600717 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "finvault".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_transactions'
+        
+        and table_schema = 'gold'
+        
+      order by ordinal_position
+
+  
+[0m16:14:04.610968 [debug] [Thread-5 (]: SQL status: SELECT 12 in 0.003 seconds
+[0m16:14:04.616728 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:14:04.616728 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "finvault".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_transactions'
+        
+        and table_schema = 'gold'
+        
+      order by ordinal_position
+
+  
+[0m16:14:04.616728 [debug] [Thread-5 (]: SQL status: SELECT 12 in 0.003 seconds
+[0m16:14:04.632656 [debug] [Thread-5 (]: Writing runtime sql for node "model.finvault.fact_transactions"
+[0m16:14:04.632656 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:14:04.632656 [debug] [Thread-5 (]: On model.finvault.fact_transactions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "model.finvault.fact_transactions"} */
+
+      
+        
+        
+        delete from "finvault"."gold"."fact_transactions" as DBT_INTERNAL_DEST
+        where (transaction_id) in (
+            select distinct transaction_id
+            from "fact_transactions__dbt_tmp161404546135" as DBT_INTERNAL_SOURCE
+        );
+
+    
+
+    insert into "finvault"."gold"."fact_transactions" ("transaction_id", "date_key", "account_key", "customer_key", "txn_type_key", "txn_ts", "amount", "signed_amount", "direction", "status", "is_posted", "batch_id")
+    (
+        select "transaction_id", "date_key", "account_key", "customer_key", "txn_type_key", "txn_ts", "amount", "signed_amount", "direction", "status", "is_posted", "batch_id"
+        from "fact_transactions__dbt_tmp161404546135"
+    )
+  
+[0m16:14:04.632656 [debug] [Thread-5 (]: SQL status: INSERT 0 506 in 0.002 seconds
+[0m16:14:04.648379 [debug] [Thread-5 (]: On model.finvault.fact_transactions: COMMIT
+[0m16:14:04.648379 [debug] [Thread-5 (]: Using postgres connection "model.finvault.fact_transactions"
+[0m16:14:04.648379 [debug] [Thread-5 (]: On model.finvault.fact_transactions: COMMIT
+[0m16:14:04.648379 [debug] [Thread-5 (]: SQL status: COMMIT in 0.002 seconds
+[0m16:14:04.648379 [debug] [Thread-5 (]: State adapter: Cleared "finvault"."gold"."fact_transactions" from cache
+[0m16:14:04.648379 [debug] [Thread-5 (]: On model.finvault.fact_transactions: Close
+[0m16:14:04.648379 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '504e1339-ba36-4388-84ad-4a9e382602f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258A26A8810>]}
+[0m16:14:04.648379 [info ] [Thread-5 (]: 1 of 1 OK created sql incremental model gold.fact_transactions ................. [[32mINSERT 0 506[0m in 0.19s]
+[0m16:14:04.648379 [debug] [Thread-5 (]: Finished running node model.finvault.fact_transactions
+[0m16:14:04.665742 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:04.665742 [debug] [MainThread]: On master: BEGIN
+[0m16:14:04.665742 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:14:04.674974 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m16:14:04.674974 [debug] [MainThread]: On master: COMMIT
+[0m16:14:04.674974 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:04.674974 [debug] [MainThread]: On master: COMMIT
+[0m16:14:04.674974 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:14:04.674974 [debug] [MainThread]: On master: Close
+[0m16:14:04.680012 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:14:04.680012 [debug] [MainThread]: Connection 'list_finvault' was properly closed.
+[0m16:14:04.681078 [debug] [MainThread]: Connection 'list_finvault_gold' was properly closed.
+[0m16:14:04.681804 [debug] [MainThread]: Connection 'model.finvault.fact_transactions' was properly closed.
+[0m16:14:04.681804 [debug] [MainThread]: Connection 'fetch_last_modified_timestamps_0' was properly closed.
+[0m16:14:04.682686 [info ] [MainThread]: 
+[0m16:14:04.683596 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 6.15 seconds (6.15s).
+[0m16:14:04.684075 [debug] [MainThread]: Command end result
+[0m16:14:04.696132 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\manifest.json
+[0m16:14:04.704362 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\semantic_manifest.json
+[0m16:14:04.704362 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\run_results.json
+[0m16:14:04.704362 [info ] [MainThread]: 
+[0m16:14:04.711542 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:14:04.712707 [info ] [MainThread]: 
+[0m16:14:04.712707 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:14:04.712707 [debug] [MainThread]: Command `dbt run` succeeded at 16:14:04.712707 after 7.51 seconds
+[0m16:14:04.712707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002589D9FFBD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002589FE50A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002589FEFC250>]}
+[0m16:14:04.712707 [debug] [MainThread]: Flushing usage events
+[0m16:14:06.239499 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:14:18.171698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066D220B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066D317690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066D315F90>]}
+
+
+============================== 16:14:18.177882 | b30d7ea0-dac8-4406-9b59-de346005bed1 ==============================
+[0m16:14:18.177882 [info ] [MainThread]: Running with dbt=1.9.11
+[0m16:14:18.179894 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt test --profiles-dir .', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\godfr\\OneDrive\\Desktop\\finvault-data-warehouse\\dbt_project\\logs'}
+[0m16:14:18.180900 [info ] [MainThread]: This version of dbt is deprecated and no longer receives regular patches, including for known bugs. We recommend upgrading to a newer supported version of dbt: https://docs.getdbt.com/docs/dbt-versions
+[0m16:14:18.180900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecated_version_invocation', 'label': 'b30d7ea0-dac8-4406-9b59-de346005bed1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066D1FE350>]}
+[0m16:14:18.788861 [info ] [MainThread]: State adapter: dbt-state v2.62.3 is enabled
+[0m16:14:18.883593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b30d7ea0-dac8-4406-9b59-de346005bed1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066D6BF650>]}
+[0m16:14:18.938155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b30d7ea0-dac8-4406-9b59-de346005bed1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066A3CFCD0>]}
+[0m16:14:18.942419 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m16:14:19.253743 [debug] [MainThread]: checksum: 2191bf62271fd478cf28c21ce953ef202bc2236227e4db3dd4cef6b50a0a91d4, vars: {}, profile: , target: , version: 1.9.11
+[0m16:14:19.416731 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:14:19.416731 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:14:19.464006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b30d7ea0-dac8-4406-9b59-de346005bed1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066FE98810>]}
+[0m16:14:19.592348 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\manifest.json
+[0m16:14:19.605200 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\semantic_manifest.json
+[0m16:14:19.605200 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b30d7ea0-dac8-4406-9b59-de346005bed1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066FDA3CD0>]}
+[0m16:14:19.605200 [info ] [MainThread]: Found 24 data tests, 1 model, 7 sources, 475 macros
+[0m16:14:19.611019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b30d7ea0-dac8-4406-9b59-de346005bed1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066A6D0610>]}
+[0m16:14:19.612039 [info ] [MainThread]: 
+[0m16:14:19.612039 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:14:19.612039 [info ] [MainThread]: 
+[0m16:14:19.617924 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:14:22.247241 [debug] [MainThread]: State adapter: Target 'prod' not found in profile 'finvault'. Deferral and dev cloning are disabled
+[0m16:14:23.594126 [debug] [ThreadPool]: Acquiring new postgres connection 'list_finvault_gold'
+[0m16:14:23.632876 [debug] [ThreadPool]: Using postgres connection "list_finvault_gold"
+[0m16:14:23.635703 [debug] [ThreadPool]: On list_finvault_gold: BEGIN
+[0m16:14:23.635703 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:14:23.679942 [debug] [ThreadPool]: SQL status: BEGIN in 0.046 seconds
+[0m16:14:23.679942 [debug] [ThreadPool]: Using postgres connection "list_finvault_gold"
+[0m16:14:23.679942 [debug] [ThreadPool]: On list_finvault_gold: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "connection_name": "list_finvault_gold"} */
+select
+      'finvault' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'finvault' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'finvault' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+  
+[0m16:14:23.696312 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.008 seconds
+[0m16:14:23.697343 [debug] [ThreadPool]: On list_finvault_gold: ROLLBACK
+[0m16:14:23.697343 [debug] [ThreadPool]: On list_finvault_gold: Close
+[0m16:14:23.713553 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:23.713553 [debug] [MainThread]: On master: BEGIN
+[0m16:14:23.713553 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:14:23.748302 [debug] [MainThread]: SQL status: BEGIN in 0.026 seconds
+[0m16:14:23.748302 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:23.749863 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:14:23.754768 [debug] [MainThread]: SQL status: SELECT 2 in 0.005 seconds
+[0m16:14:23.757893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b30d7ea0-dac8-4406-9b59-de346005bed1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066D3016D0>]}
+[0m16:14:23.757893 [debug] [MainThread]: On master: ROLLBACK
+[0m16:14:23.761178 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:23.761178 [debug] [MainThread]: On master: BEGIN
+[0m16:14:23.762850 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m16:14:23.762850 [debug] [MainThread]: On master: COMMIT
+[0m16:14:23.762850 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:23.762850 [debug] [MainThread]: On master: COMMIT
+[0m16:14:23.762850 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m16:14:23.762850 [debug] [MainThread]: On master: Close
+[0m16:14:23.775350 [debug] [Thread-5 (]: Began running node test.finvault.no_overlapping_customer_versions
+[0m16:14:23.775350 [debug] [Thread-6 (]: Began running node test.finvault.one_current_row_per_customer
+[0m16:14:23.775350 [debug] [Thread-7 (]: Began running node test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7
+[0m16:14:23.775350 [debug] [Thread-8 (]: Began running node test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5
+[0m16:14:23.775350 [info ] [Thread-5 (]: 1 of 24 START test no_overlapping_customer_versions ............................ [RUN]
+[0m16:14:23.775350 [info ] [Thread-6 (]: 2 of 24 START test one_current_row_per_customer ................................ [RUN]
+[0m16:14:23.775350 [info ] [Thread-7 (]: 3 of 24 START test source_accepted_values_silver_transactions_direction__CREDIT__DEBIT  [RUN]
+[0m16:14:23.775350 [debug] [Thread-5 (]: Acquiring new postgres connection 'test.finvault.no_overlapping_customer_versions'
+[0m16:14:23.775350 [info ] [Thread-8 (]: 4 of 24 START test source_not_null_gold_dim_account_account_key ................ [RUN]
+[0m16:14:23.775350 [debug] [Thread-6 (]: Acquiring new postgres connection 'test.finvault.one_current_row_per_customer'
+[0m16:14:23.775350 [debug] [Thread-7 (]: Acquiring new postgres connection 'test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7'
+[0m16:14:23.775350 [debug] [Thread-5 (]: Began compiling node test.finvault.no_overlapping_customer_versions
+[0m16:14:23.775350 [debug] [Thread-8 (]: Acquiring new postgres connection 'test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5'
+[0m16:14:23.775350 [debug] [Thread-6 (]: Began compiling node test.finvault.one_current_row_per_customer
+[0m16:14:23.787453 [debug] [Thread-7 (]: Began compiling node test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7
+[0m16:14:23.793764 [debug] [Thread-5 (]: Writing injected SQL for node "test.finvault.no_overlapping_customer_versions"
+[0m16:14:23.799106 [debug] [Thread-8 (]: Began compiling node test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5
+[0m16:14:23.805171 [debug] [Thread-6 (]: Writing injected SQL for node "test.finvault.one_current_row_per_customer"
+[0m16:14:23.816082 [debug] [Thread-7 (]: Writing injected SQL for node "test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7"
+[0m16:14:23.828637 [debug] [Thread-8 (]: Writing injected SQL for node "test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5"
+[0m16:14:23.828637 [debug] [Thread-5 (]: Began executing node test.finvault.no_overlapping_customer_versions
+[0m16:14:23.828637 [debug] [Thread-6 (]: Began executing node test.finvault.one_current_row_per_customer
+[0m16:14:23.828637 [debug] [Thread-7 (]: Began executing node test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7
+[0m16:14:23.845334 [debug] [Thread-8 (]: Began executing node test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5
+[0m16:14:23.860219 [debug] [Thread-5 (]: Writing runtime sql for node "test.finvault.no_overlapping_customer_versions"
+[0m16:14:23.861153 [debug] [Thread-6 (]: Writing runtime sql for node "test.finvault.one_current_row_per_customer"
+[0m16:14:23.868322 [debug] [Thread-7 (]: Writing runtime sql for node "test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7"
+[0m16:14:23.868322 [debug] [Thread-8 (]: Writing runtime sql for node "test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5"
+[0m16:14:23.892718 [debug] [drc_0     ]: State adapter: Fetching definition for views: "finvault"."gold"."dim_customer"
+[0m16:14:23.892718 [debug] [drc_1     ]: State adapter: Fetching definition for views: "finvault"."silver"."transactions"
+[0m16:14:23.908571 [debug] [drc_0     ]: Acquiring new postgres connection 'fetch_views_0'
+[0m16:14:23.908571 [debug] [drc_2     ]: State adapter: Fetching definition for views: "finvault"."gold"."dim_account"
+[0m16:14:23.908571 [debug] [drc_1     ]: Acquiring new postgres connection 'fetch_views_0'
+[0m16:14:23.908571 [debug] [drc_0     ]: Using postgres connection "fetch_views_0"
+[0m16:14:23.908571 [debug] [drc_2     ]: Acquiring new postgres connection 'fetch_views_0'
+[0m16:14:23.908571 [debug] [drc_1     ]: Using postgres connection "fetch_views_0"
+[0m16:14:23.908571 [debug] [drc_0     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE schemaname = 'gold' AND viewname = 'dim_customer'
+        
+[0m16:14:23.908571 [debug] [drc_2     ]: Using postgres connection "fetch_views_0"
+[0m16:14:23.908571 [debug] [drc_1     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE schemaname = 'silver' AND viewname = 'transactions'
+        
+[0m16:14:23.908571 [debug] [drc_0     ]: Opening a new connection, currently in state init
+[0m16:14:23.908571 [debug] [drc_2     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE schemaname = 'gold' AND viewname = 'dim_account'
+        
+[0m16:14:23.908571 [debug] [drc_1     ]: Opening a new connection, currently in state init
+[0m16:14:23.908571 [debug] [drc_2     ]: Opening a new connection, currently in state init
+[0m16:14:23.941826 [debug] [drc_0     ]: SQL status: SELECT 0 in 0.024 seconds
+[0m16:14:23.943402 [debug] [drc_0     ]: On fetch_views_0: Close
+[0m16:14:23.945040 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."dim_customer"
+[0m16:14:23.945040 [debug] [drc_0     ]: Re-using an available connection from the pool (formerly fetch_views_0, now fetch_last_modified_timestamps_0)
+[0m16:14:23.945040 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:23.945040 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."dim_customer" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:23.945040 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:14:24.005407 [debug] [drc_1     ]: SQL status: SELECT 0 in 0.088 seconds
+[0m16:14:24.005407 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.005407 [debug] [drc_1     ]: On fetch_views_0: Close
+[0m16:14:24.005407 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.005407 [debug] [drc_2     ]: SQL status: SELECT 0 in 0.094 seconds
+[0m16:14:24.005407 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."silver"."transactions"
+[0m16:14:24.005407 [warn ] [Thread-5 (]: State adapter: Runtime error preparing enriched SQL for test 'no_overlapping_customer_versions': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.020258 [debug] [drc_2     ]: On fetch_views_0: Close
+[0m16:14:24.005407 [warn ] [Thread-6 (]: State adapter: Runtime error preparing enriched SQL for test 'one_current_row_per_customer': Future cancelled. Continuing without state
+[0m16:14:24.020769 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.022783 [warn ] [Thread-5 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.no_overlapping_customer_versions': NoneType. Continuing without state
+[0m16:14:24.027203 [debug] [drc_1     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."dim_account"
+[0m16:14:24.025569 [warn ] [Thread-6 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.one_current_row_per_customer': NoneType. Continuing without state
+[0m16:14:24.029217 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."silver"."transactions" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.030998 [debug] [Thread-5 (]: Using postgres connection "test.finvault.no_overlapping_customer_versions"
+[0m16:14:24.031907 [debug] [drc_1     ]: Re-using an available connection from the pool (formerly fetch_views_0, now fetch_last_modified_timestamps_0)
+[0m16:14:24.033220 [debug] [Thread-6 (]: Using postgres connection "test.finvault.one_current_row_per_customer"
+[0m16:14:24.034055 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:14:24.034055 [debug] [Thread-5 (]: On test.finvault.no_overlapping_customer_versions: BEGIN
+[0m16:14:24.034055 [debug] [drc_1     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.034055 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."dim_account" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.034055 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m16:14:24.034055 [debug] [Thread-6 (]: On test.finvault.one_current_row_per_customer: BEGIN
+[0m16:14:24.039483 [debug] [drc_1     ]: Opening a new connection, currently in state closed
+[0m16:14:24.040728 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m16:14:24.063601 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.065611 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.068293 [debug] [Thread-5 (]: SQL status: BEGIN in 0.030 seconds
+[0m16:14:24.068293 [debug] [Thread-6 (]: SQL status: BEGIN in 0.028 seconds
+[0m16:14:24.067413 [warn ] [Thread-7 (]: State adapter: Runtime error preparing enriched SQL for test 'source_accepted_values_silver_transactions_direction__CREDIT__DEBIT': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.068293 [debug] [Thread-5 (]: Using postgres connection "test.finvault.no_overlapping_customer_versions"
+[0m16:14:24.068293 [debug] [Thread-6 (]: Using postgres connection "test.finvault.one_current_row_per_customer"
+[0m16:14:24.068293 [warn ] [Thread-7 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7': NoneType. Continuing without state
+[0m16:14:24.072137 [debug] [Thread-5 (]: On test.finvault.no_overlapping_customer_versions: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.no_overlapping_customer_versions"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select a.customer_id
+from "finvault"."gold"."dim_customer" a
+join "finvault"."gold"."dim_customer" b
+  on a.customer_id = b.customer_id
+ and a.customer_key < b.customer_key
+ and a.valid_from < b.valid_to
+ and b.valid_from < a.valid_to
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.072137 [debug] [Thread-6 (]: On test.finvault.one_current_row_per_customer: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.one_current_row_per_customer"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select customer_id
+from "finvault"."gold"."dim_customer"
+where is_current
+group by customer_id
+having count(*) <> 1
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.074198 [debug] [drc_1     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.074709 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7"
+[0m16:14:24.076474 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.076474 [debug] [Thread-7 (]: On test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7: BEGIN
+[0m16:14:24.077446 [debug] [Thread-6 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m16:14:24.079627 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m16:14:24.084596 [debug] [Thread-6 (]: On test.finvault.one_current_row_per_customer: ROLLBACK
+[0m16:14:24.079627 [warn ] [Thread-8 (]: State adapter: Runtime error preparing enriched SQL for test 'source_not_null_gold_dim_account_account_key': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.084596 [debug] [Thread-5 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m16:14:24.087831 [debug] [Thread-6 (]: On test.finvault.one_current_row_per_customer: Close
+[0m16:14:24.087831 [warn ] [Thread-8 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5': NoneType. Continuing without state
+[0m16:14:24.090459 [debug] [Thread-5 (]: On test.finvault.no_overlapping_customer_versions: ROLLBACK
+[0m16:14:24.092685 [info ] [Thread-6 (]: 2 of 24 PASS one_current_row_per_customer ...................................... [[32mPASS[0m in 0.32s]
+[0m16:14:24.094692 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5"
+[0m16:14:24.098679 [debug] [Thread-5 (]: On test.finvault.no_overlapping_customer_versions: Close
+[0m16:14:24.098679 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5: BEGIN
+[0m16:14:24.098679 [debug] [Thread-6 (]: Finished running node test.finvault.one_current_row_per_customer
+[0m16:14:24.100693 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m16:14:24.102746 [debug] [Thread-6 (]: Began running node test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c
+[0m16:14:24.100693 [info ] [Thread-5 (]: 1 of 24 PASS no_overlapping_customer_versions .................................. [[32mPASS[0m in 0.33s]
+[0m16:14:24.104674 [info ] [Thread-6 (]: 5 of 24 START test source_not_null_gold_dim_customer_customer_key .............. [RUN]
+[0m16:14:24.106561 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.finvault.one_current_row_per_customer, now test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c)
+[0m16:14:24.106561 [debug] [Thread-5 (]: Finished running node test.finvault.no_overlapping_customer_versions
+[0m16:14:24.106561 [debug] [Thread-6 (]: Began compiling node test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c
+[0m16:14:24.106561 [debug] [Thread-5 (]: Began running node test.finvault.source_not_null_gold_dim_date_date_key.076289dc41
+[0m16:14:24.114763 [debug] [Thread-6 (]: Writing injected SQL for node "test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c"
+[0m16:14:24.114763 [info ] [Thread-5 (]: 6 of 24 START test source_not_null_gold_dim_date_date_key ...................... [RUN]
+[0m16:14:24.114763 [debug] [Thread-7 (]: SQL status: BEGIN in 0.037 seconds
+[0m16:14:24.114763 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.finvault.no_overlapping_customer_versions, now test.finvault.source_not_null_gold_dim_date_date_key.076289dc41)
+[0m16:14:24.114763 [debug] [Thread-6 (]: Began executing node test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c
+[0m16:14:24.114763 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7"
+[0m16:14:24.120624 [debug] [Thread-5 (]: Began compiling node test.finvault.source_not_null_gold_dim_date_date_key.076289dc41
+[0m16:14:24.122519 [debug] [Thread-6 (]: Writing runtime sql for node "test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c"
+[0m16:14:24.124535 [debug] [Thread-7 (]: On test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        direction as value_field,
+        count(*) as n_records
+
+    from "finvault"."silver"."transactions"
+    group by direction
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'CREDIT','DEBIT'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.129799 [debug] [Thread-5 (]: Writing injected SQL for node "test.finvault.source_not_null_gold_dim_date_date_key.076289dc41"
+[0m16:14:24.132626 [debug] [Thread-7 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m16:14:24.137767 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."dim_customer"
+[0m16:14:24.137767 [debug] [Thread-7 (]: On test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7: ROLLBACK
+[0m16:14:24.137767 [debug] [Thread-5 (]: Began executing node test.finvault.source_not_null_gold_dim_date_date_key.076289dc41
+[0m16:14:24.142693 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.142693 [debug] [Thread-8 (]: SQL status: BEGIN in 0.041 seconds
+[0m16:14:24.147322 [debug] [Thread-5 (]: Writing runtime sql for node "test.finvault.source_not_null_gold_dim_date_date_key.076289dc41"
+[0m16:14:24.149335 [debug] [Thread-7 (]: On test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7: Close
+[0m16:14:24.149335 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."dim_customer" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.149335 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5"
+[0m16:14:24.149335 [info ] [Thread-7 (]: 3 of 24 PASS source_accepted_values_silver_transactions_direction__CREDIT__DEBIT  [[32mPASS[0m in 0.37s]
+[0m16:14:24.152816 [debug] [drc_2     ]: State adapter: Fetching definition for views: "finvault"."gold"."dim_date"
+[0m16:14:24.152816 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:14:24.152816 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select account_key
+from "finvault"."gold"."dim_account"
+where account_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.152816 [debug] [drc_2     ]: Using postgres connection "fetch_views_0"
+[0m16:14:24.152816 [debug] [Thread-7 (]: Finished running node test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7
+[0m16:14:24.159009 [debug] [drc_2     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE schemaname = 'gold' AND viewname = 'dim_date'
+        
+[0m16:14:24.159009 [debug] [Thread-7 (]: Began running node test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3
+[0m16:14:24.161115 [debug] [drc_2     ]: Opening a new connection, currently in state closed
+[0m16:14:24.163126 [debug] [Thread-8 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m16:14:24.163126 [info ] [Thread-7 (]: 7 of 24 START test source_not_null_gold_dim_transaction_type_txn_type_key ...... [RUN]
+[0m16:14:24.167813 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5: ROLLBACK
+[0m16:14:24.167813 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly test.finvault.source_accepted_values_silver_transactions_direction__CREDIT__DEBIT.427e0a45f7, now test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3)
+[0m16:14:24.170595 [debug] [Thread-7 (]: Began compiling node test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3
+[0m16:14:24.170595 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5: Close
+[0m16:14:24.173392 [debug] [Thread-7 (]: Writing injected SQL for node "test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3"
+[0m16:14:24.173392 [info ] [Thread-8 (]: 4 of 24 PASS source_not_null_gold_dim_account_account_key ...................... [[32mPASS[0m in 0.40s]
+[0m16:14:24.178052 [debug] [Thread-7 (]: Began executing node test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3
+[0m16:14:24.181610 [debug] [Thread-8 (]: Finished running node test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5
+[0m16:14:24.184161 [debug] [Thread-7 (]: Writing runtime sql for node "test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3"
+[0m16:14:24.184161 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.184161 [debug] [Thread-8 (]: Began running node test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8
+[0m16:14:24.184161 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.189550 [debug] [drc_1     ]: State adapter: Fetching definition for views: "finvault"."gold"."dim_transaction_type"
+[0m16:14:24.189550 [debug] [drc_2     ]: SQL status: SELECT 0 in 0.032 seconds
+[0m16:14:24.189550 [info ] [Thread-8 (]: 8 of 24 START test source_not_null_gold_fact_daily_account_balance_account_key . [RUN]
+[0m16:14:24.194951 [debug] [drc_1     ]: Re-using an available connection from the pool (formerly fetch_last_modified_timestamps_0, now fetch_views_0)
+[0m16:14:24.194951 [warn ] [Thread-6 (]: State adapter: Runtime error preparing enriched SQL for test 'source_not_null_gold_dim_customer_customer_key': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.198706 [debug] [drc_2     ]: On fetch_views_0: Close
+[0m16:14:24.198706 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.finvault.source_not_null_gold_dim_account_account_key.76a178c1a5, now test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8)
+[0m16:14:24.198706 [debug] [drc_1     ]: Using postgres connection "fetch_views_0"
+[0m16:14:24.202089 [warn ] [Thread-6 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c': NoneType. Continuing without state
+[0m16:14:24.203665 [debug] [Thread-8 (]: Began compiling node test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8
+[0m16:14:24.204873 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."dim_date"
+[0m16:14:24.205890 [debug] [drc_1     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE schemaname = 'gold' AND viewname = 'dim_transaction_type'
+        
+[0m16:14:24.205890 [debug] [Thread-6 (]: Using postgres connection "test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c"
+[0m16:14:24.210869 [debug] [Thread-8 (]: Writing injected SQL for node "test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8"
+[0m16:14:24.215566 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.219596 [debug] [drc_1     ]: Opening a new connection, currently in state closed
+[0m16:14:24.219596 [debug] [Thread-6 (]: On test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c: BEGIN
+[0m16:14:24.219596 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."dim_date" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.224095 [debug] [Thread-8 (]: Began executing node test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8
+[0m16:14:24.229974 [debug] [Thread-8 (]: Writing runtime sql for node "test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8"
+[0m16:14:24.226658 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:14:24.224904 [debug] [Thread-6 (]: Opening a new connection, currently in state closed
+[0m16:14:24.232135 [debug] [drc_2     ]: State adapter: Fetching definition for views: "finvault"."gold"."fact_daily_account_balance"
+[0m16:14:24.236732 [debug] [drc_2     ]: Using postgres connection "fetch_views_0"
+[0m16:14:24.238739 [debug] [drc_2     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE schemaname = 'gold' AND viewname = 'fact_daily_account_balance'
+        
+[0m16:14:24.242499 [debug] [drc_2     ]: Opening a new connection, currently in state closed
+[0m16:14:24.248254 [debug] [drc_1     ]: SQL status: SELECT 0 in 0.029 seconds
+[0m16:14:24.250267 [debug] [drc_1     ]: On fetch_views_0: Close
+[0m16:14:24.254860 [debug] [drc_1     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."dim_transaction_type"
+[0m16:14:24.254860 [debug] [drc_1     ]: Re-using an available connection from the pool (formerly fetch_views_0, now fetch_last_modified_timestamps_0)
+[0m16:14:24.258667 [debug] [drc_1     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.258667 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.261008 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."dim_transaction_type" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.261008 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.263017 [debug] [drc_1     ]: Opening a new connection, currently in state closed
+[0m16:14:24.266282 [debug] [Thread-6 (]: SQL status: BEGIN in 0.041 seconds
+[0m16:14:24.263637 [warn ] [Thread-5 (]: State adapter: Runtime error preparing enriched SQL for test 'source_not_null_gold_dim_date_date_key': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.266282 [debug] [Thread-6 (]: Using postgres connection "test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c"
+[0m16:14:24.268295 [debug] [Thread-6 (]: On test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_key
+from "finvault"."gold"."dim_customer"
+where customer_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.270307 [debug] [drc_2     ]: SQL status: SELECT 0 in 0.028 seconds
+[0m16:14:24.273060 [debug] [drc_2     ]: On fetch_views_0: Close
+[0m16:14:24.268295 [warn ] [Thread-5 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_not_null_gold_dim_date_date_key.076289dc41': NoneType. Continuing without state
+[0m16:14:24.275270 [debug] [Thread-5 (]: Using postgres connection "test.finvault.source_not_null_gold_dim_date_date_key.076289dc41"
+[0m16:14:24.275806 [debug] [Thread-6 (]: SQL status: SELECT 1 in 0.006 seconds
+[0m16:14:24.275806 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."fact_daily_account_balance"
+[0m16:14:24.275806 [debug] [Thread-5 (]: On test.finvault.source_not_null_gold_dim_date_date_key.076289dc41: BEGIN
+[0m16:14:24.275806 [debug] [Thread-6 (]: On test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c: ROLLBACK
+[0m16:14:24.282988 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.283616 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m16:14:24.283616 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."fact_daily_account_balance" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.286733 [debug] [Thread-6 (]: On test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c: Close
+[0m16:14:24.287404 [debug] [drc_1     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.288761 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:14:24.291856 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.291856 [info ] [Thread-6 (]: 5 of 24 PASS source_not_null_gold_dim_customer_customer_key .................... [[32mPASS[0m in 0.18s]
+[0m16:14:24.297602 [debug] [Thread-6 (]: Finished running node test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c
+[0m16:14:24.295493 [warn ] [Thread-7 (]: State adapter: Runtime error preparing enriched SQL for test 'source_not_null_gold_dim_transaction_type_txn_type_key': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.297602 [debug] [Thread-6 (]: Began running node test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0
+[0m16:14:24.300981 [warn ] [Thread-7 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3': NoneType. Continuing without state
+[0m16:14:24.300981 [info ] [Thread-6 (]: 9 of 24 START test source_not_null_gold_fact_transactions_account_key .......... [RUN]
+[0m16:14:24.300981 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3"
+[0m16:14:24.303788 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.finvault.source_not_null_gold_dim_customer_customer_key.e5356f060c, now test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0)
+[0m16:14:24.304777 [debug] [Thread-7 (]: On test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3: BEGIN
+[0m16:14:24.304777 [debug] [Thread-6 (]: Began compiling node test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0
+[0m16:14:24.304777 [debug] [Thread-7 (]: Opening a new connection, currently in state closed
+[0m16:14:24.308309 [debug] [Thread-6 (]: Writing injected SQL for node "test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0"
+[0m16:14:24.314226 [debug] [Thread-5 (]: SQL status: BEGIN in 0.031 seconds
+[0m16:14:24.316079 [debug] [Thread-6 (]: Began executing node test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0
+[0m16:14:24.316079 [debug] [Thread-5 (]: Using postgres connection "test.finvault.source_not_null_gold_dim_date_date_key.076289dc41"
+[0m16:14:24.320623 [debug] [Thread-6 (]: Writing runtime sql for node "test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0"
+[0m16:14:24.320623 [debug] [Thread-5 (]: On test.finvault.source_not_null_gold_dim_date_date_key.076289dc41: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_not_null_gold_dim_date_date_key.076289dc41"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_key
+from "finvault"."gold"."dim_date"
+where date_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.320623 [debug] [drc_2     ]: State adapter: Fetching definition for views: "finvault"."gold"."fact_transactions"
+[0m16:14:24.320623 [debug] [Thread-5 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m16:14:24.320623 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.328996 [debug] [drc_2     ]: Using postgres connection "fetch_views_0"
+[0m16:14:24.331217 [debug] [Thread-7 (]: SQL status: BEGIN in 0.025 seconds
+[0m16:14:24.331217 [debug] [Thread-5 (]: On test.finvault.source_not_null_gold_dim_date_date_key.076289dc41: ROLLBACK
+[0m16:14:24.331217 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.331217 [debug] [drc_2     ]: On fetch_views_0: 
+        SELECT
+            schemaname,
+            viewname,
+            definition
+        FROM pg_views
+        WHERE schemaname = 'gold' AND viewname = 'fact_transactions'
+        
+[0m16:14:24.331217 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3"
+[0m16:14:24.336854 [debug] [Thread-5 (]: On test.finvault.source_not_null_gold_dim_date_date_key.076289dc41: Close
+[0m16:14:24.331217 [warn ] [Thread-8 (]: State adapter: Runtime error preparing enriched SQL for test 'source_not_null_gold_fact_daily_account_balance_account_key': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.336854 [debug] [drc_2     ]: Opening a new connection, currently in state closed
+[0m16:14:24.337866 [debug] [Thread-7 (]: On test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select txn_type_key
+from "finvault"."gold"."dim_transaction_type"
+where txn_type_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.339434 [info ] [Thread-5 (]: 6 of 24 PASS source_not_null_gold_dim_date_date_key ............................ [[32mPASS[0m in 0.22s]
+[0m16:14:24.339434 [warn ] [Thread-8 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8': NoneType. Continuing without state
+[0m16:14:24.342537 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8"
+[0m16:14:24.344093 [debug] [Thread-5 (]: Finished running node test.finvault.source_not_null_gold_dim_date_date_key.076289dc41
+[0m16:14:24.345222 [debug] [Thread-7 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m16:14:24.346692 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8: BEGIN
+[0m16:14:24.347907 [debug] [Thread-5 (]: Began running node test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838
+[0m16:14:24.349458 [debug] [Thread-7 (]: On test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3: ROLLBACK
+[0m16:14:24.349458 [debug] [Thread-8 (]: Opening a new connection, currently in state closed
+[0m16:14:24.351038 [info ] [Thread-5 (]: 10 of 24 START test source_not_null_gold_fact_transactions_customer_key ........ [RUN]
+[0m16:14:24.352579 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.finvault.source_not_null_gold_dim_date_date_key.076289dc41, now test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838)
+[0m16:14:24.352579 [debug] [Thread-7 (]: On test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3: Close
+[0m16:14:24.352579 [debug] [Thread-5 (]: Began compiling node test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838
+[0m16:14:24.354150 [info ] [Thread-7 (]: 7 of 24 PASS source_not_null_gold_dim_transaction_type_txn_type_key ............ [[32mPASS[0m in 0.19s]
+[0m16:14:24.358094 [debug] [Thread-5 (]: Writing injected SQL for node "test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838"
+[0m16:14:24.363193 [debug] [Thread-7 (]: Finished running node test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3
+[0m16:14:24.363193 [debug] [Thread-7 (]: Began running node test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351
+[0m16:14:24.363193 [debug] [Thread-5 (]: Began executing node test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838
+[0m16:14:24.363193 [info ] [Thread-7 (]: 11 of 24 START test source_not_null_gold_fact_transactions_transaction_id ...... [RUN]
+[0m16:14:24.363193 [debug] [Thread-5 (]: Writing runtime sql for node "test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838"
+[0m16:14:24.363193 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly test.finvault.source_not_null_gold_dim_transaction_type_txn_type_key.49baa60be3, now test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351)
+[0m16:14:24.363193 [debug] [drc_2     ]: SQL status: SELECT 0 in 0.036 seconds
+[0m16:14:24.363193 [debug] [Thread-7 (]: Began compiling node test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351
+[0m16:14:24.363193 [debug] [drc_2     ]: On fetch_views_0: Close
+[0m16:14:24.381198 [debug] [Thread-7 (]: Writing injected SQL for node "test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351"
+[0m16:14:24.385007 [debug] [drc_1     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."fact_transactions"
+[0m16:14:24.385007 [debug] [drc_1     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.385007 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."fact_transactions" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.389842 [debug] [Thread-7 (]: Began executing node test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351
+[0m16:14:24.389842 [debug] [Thread-8 (]: SQL status: BEGIN in 0.041 seconds
+[0m16:14:24.389842 [debug] [drc_1     ]: Opening a new connection, currently in state closed
+[0m16:14:24.394974 [debug] [Thread-7 (]: Writing runtime sql for node "test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351"
+[0m16:14:24.396904 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8"
+[0m16:14:24.396904 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select account_key
+from "finvault"."gold"."fact_daily_account_balance"
+where account_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.406365 [debug] [Thread-8 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m16:14:24.406365 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8: ROLLBACK
+[0m16:14:24.410303 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8: Close
+[0m16:14:24.413252 [info ] [Thread-8 (]: 8 of 24 PASS source_not_null_gold_fact_daily_account_balance_account_key ....... [[32mPASS[0m in 0.21s]
+[0m16:14:24.413252 [debug] [Thread-8 (]: Finished running node test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8
+[0m16:14:24.413252 [debug] [Thread-8 (]: Began running node test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca
+[0m16:14:24.413252 [info ] [Thread-8 (]: 12 of 24 START test source_not_null_gold_fact_transactions_txn_type_key ........ [RUN]
+[0m16:14:24.413252 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.finvault.source_not_null_gold_fact_daily_account_balance_account_key.34e36841d8, now test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca)
+[0m16:14:24.413252 [debug] [Thread-8 (]: Began compiling node test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca
+[0m16:14:24.559433 [debug] [Thread-8 (]: Writing injected SQL for node "test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca"
+[0m16:14:24.560704 [debug] [drc_1     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.564479 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.564479 [debug] [Thread-8 (]: Began executing node test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca
+[0m16:14:24.573364 [debug] [Thread-8 (]: Writing runtime sql for node "test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca"
+[0m16:14:24.564479 [warn ] [Thread-6 (]: State adapter: Runtime error preparing enriched SQL for test 'source_not_null_gold_fact_transactions_account_key': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.568265 [warn ] [Thread-5 (]: State adapter: Runtime error preparing enriched SQL for test 'source_not_null_gold_fact_transactions_customer_key': Future cancelled. Continuing without state
+[0m16:14:24.568265 [warn ] [Thread-7 (]: State adapter: Runtime error preparing enriched SQL for test 'source_not_null_gold_fact_transactions_transaction_id': Future cancelled. Continuing without state
+[0m16:14:24.579931 [warn ] [Thread-6 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0': NoneType. Continuing without state
+[0m16:14:24.587026 [debug] [drc_1     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."fact_transactions"
+[0m16:14:24.587026 [warn ] [Thread-5 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838': NoneType. Continuing without state
+[0m16:14:24.590874 [debug] [Thread-6 (]: Using postgres connection "test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0"
+[0m16:14:24.594885 [debug] [Thread-6 (]: On test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0: BEGIN
+[0m16:14:24.591920 [debug] [drc_1     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.594375 [debug] [Thread-5 (]: Using postgres connection "test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838"
+[0m16:14:24.590336 [warn ] [Thread-7 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351': NoneType. Continuing without state
+[0m16:14:24.596016 [debug] [Thread-6 (]: Opening a new connection, currently in state closed
+[0m16:14:24.596016 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."fact_transactions" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.597049 [debug] [Thread-5 (]: On test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838: BEGIN
+[0m16:14:24.597049 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351"
+[0m16:14:24.597049 [debug] [drc_1     ]: Opening a new connection, currently in state closed
+[0m16:14:24.597049 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m16:14:24.600783 [debug] [Thread-7 (]: On test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351: BEGIN
+[0m16:14:24.603985 [debug] [Thread-7 (]: Opening a new connection, currently in state closed
+[0m16:14:24.615613 [debug] [Thread-6 (]: SQL status: BEGIN in 0.020 seconds
+[0m16:14:24.617828 [debug] [drc_1     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.617828 [debug] [Thread-6 (]: Using postgres connection "test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0"
+[0m16:14:24.617828 [debug] [Thread-7 (]: SQL status: BEGIN in 0.015 seconds
+[0m16:14:24.617828 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.617828 [debug] [Thread-6 (]: On test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select account_key
+from "finvault"."gold"."fact_transactions"
+where account_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.617828 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351"
+[0m16:14:24.617828 [warn ] [Thread-8 (]: State adapter: Runtime error preparing enriched SQL for test 'source_not_null_gold_fact_transactions_txn_type_key': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.622098 [debug] [Thread-7 (]: On test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from "finvault"."gold"."fact_transactions"
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.623542 [warn ] [Thread-8 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca': NoneType. Continuing without state
+[0m16:14:24.623542 [debug] [Thread-6 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m16:14:24.624542 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca"
+[0m16:14:24.626495 [debug] [Thread-6 (]: On test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0: ROLLBACK
+[0m16:14:24.627009 [debug] [Thread-7 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m16:14:24.627762 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca: BEGIN
+[0m16:14:24.629464 [debug] [Thread-7 (]: On test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351: ROLLBACK
+[0m16:14:24.631005 [debug] [Thread-6 (]: On test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0: Close
+[0m16:14:24.631597 [debug] [Thread-8 (]: Opening a new connection, currently in state closed
+[0m16:14:24.632142 [debug] [Thread-7 (]: On test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351: Close
+[0m16:14:24.632142 [info ] [Thread-6 (]: 9 of 24 PASS source_not_null_gold_fact_transactions_account_key ................ [[32mPASS[0m in 0.33s]
+[0m16:14:24.634743 [info ] [Thread-7 (]: 11 of 24 PASS source_not_null_gold_fact_transactions_transaction_id ............ [[32mPASS[0m in 0.27s]
+[0m16:14:24.637878 [debug] [Thread-5 (]: SQL status: BEGIN in 0.038 seconds
+[0m16:14:24.638568 [debug] [Thread-6 (]: Finished running node test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0
+[0m16:14:24.639088 [debug] [Thread-5 (]: Using postgres connection "test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838"
+[0m16:14:24.639088 [debug] [Thread-6 (]: Began running node test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41
+[0m16:14:24.639088 [debug] [Thread-7 (]: Finished running node test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351
+[0m16:14:24.640676 [debug] [Thread-5 (]: On test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_key
+from "finvault"."gold"."fact_transactions"
+where customer_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.640676 [info ] [Thread-6 (]: 13 of 24 START test source_not_null_silver_transactions_amount ................. [RUN]
+[0m16:14:24.640676 [debug] [Thread-7 (]: Began running node test.finvault.source_not_null_silver_transactions_transaction_id.6135437141
+[0m16:14:24.642870 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.finvault.source_not_null_gold_fact_transactions_account_key.3e6e2179e0, now test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41)
+[0m16:14:24.643390 [info ] [Thread-7 (]: 14 of 24 START test source_not_null_silver_transactions_transaction_id ......... [RUN]
+[0m16:14:24.643390 [debug] [Thread-6 (]: Began compiling node test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41
+[0m16:14:24.644940 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly test.finvault.source_not_null_gold_fact_transactions_transaction_id.2f2c8e5351, now test.finvault.source_not_null_silver_transactions_transaction_id.6135437141)
+[0m16:14:24.646449 [debug] [Thread-6 (]: Writing injected SQL for node "test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41"
+[0m16:14:24.646449 [debug] [Thread-7 (]: Began compiling node test.finvault.source_not_null_silver_transactions_transaction_id.6135437141
+[0m16:14:24.646449 [debug] [Thread-7 (]: Writing injected SQL for node "test.finvault.source_not_null_silver_transactions_transaction_id.6135437141"
+[0m16:14:24.654544 [debug] [Thread-6 (]: Began executing node test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41
+[0m16:14:24.654544 [debug] [Thread-7 (]: Began executing node test.finvault.source_not_null_silver_transactions_transaction_id.6135437141
+[0m16:14:24.656725 [debug] [Thread-6 (]: Writing runtime sql for node "test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41"
+[0m16:14:24.656725 [debug] [Thread-7 (]: Writing runtime sql for node "test.finvault.source_not_null_silver_transactions_transaction_id.6135437141"
+[0m16:14:24.662579 [debug] [drc_2     ]: State adapter: Fetching last_modified for tables: "finvault"."silver"."transactions"
+[0m16:14:24.662579 [debug] [drc_2     ]: Re-using an available connection from the pool (formerly fetch_views_0, now fetch_last_modified_timestamps_0)
+[0m16:14:24.662579 [debug] [drc_2     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.662579 [debug] [drc_2     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."silver"."transactions" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.662579 [debug] [drc_2     ]: Opening a new connection, currently in state closed
+[0m16:14:24.683736 [debug] [Thread-5 (]: SQL status: SELECT 1 in 0.042 seconds
+[0m16:14:24.686809 [debug] [Thread-5 (]: On test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838: ROLLBACK
+[0m16:14:24.687353 [debug] [Thread-5 (]: On test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838: Close
+[0m16:14:24.688612 [info ] [Thread-5 (]: 10 of 24 PASS source_not_null_gold_fact_transactions_customer_key .............. [[32mPASS[0m in 0.34s]
+[0m16:14:24.690668 [debug] [Thread-5 (]: Finished running node test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838
+[0m16:14:24.692675 [debug] [Thread-5 (]: Began running node test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405
+[0m16:14:24.692675 [info ] [Thread-5 (]: 15 of 24 START test source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_  [RUN]
+[0m16:14:24.694050 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.finvault.source_not_null_gold_fact_transactions_customer_key.e8730c3838, now test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405)
+[0m16:14:24.695443 [debug] [Thread-5 (]: Began compiling node test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405
+[0m16:14:24.695443 [debug] [Thread-8 (]: SQL status: BEGIN in 0.064 seconds
+[0m16:14:24.702950 [debug] [Thread-5 (]: Writing injected SQL for node "test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405"
+[0m16:14:24.702950 [debug] [drc_2     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.702950 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca"
+[0m16:14:24.704961 [debug] [drc_2     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.705826 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select txn_type_key
+from "finvault"."gold"."fact_transactions"
+where txn_type_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.705826 [debug] [Thread-5 (]: Began executing node test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405
+[0m16:14:24.711261 [debug] [Thread-5 (]: Writing runtime sql for node "test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405"
+[0m16:14:24.711261 [debug] [Thread-8 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m16:14:24.711261 [warn ] [Thread-6 (]: State adapter: Runtime error preparing enriched SQL for test 'source_not_null_silver_transactions_amount': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.711261 [warn ] [Thread-7 (]: State adapter: Runtime error preparing enriched SQL for test 'source_not_null_silver_transactions_transaction_id': Future cancelled. Continuing without state
+[0m16:14:24.711261 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca: ROLLBACK
+[0m16:14:24.719710 [warn ] [Thread-7 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_not_null_silver_transactions_transaction_id.6135437141': NoneType. Continuing without state
+[0m16:14:24.719710 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."fact_daily_account_balance", "finvault"."gold"."dim_account"
+[0m16:14:24.717347 [warn ] [Thread-6 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41': NoneType. Continuing without state
+[0m16:14:24.719710 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_not_null_silver_transactions_transaction_id.6135437141"
+[0m16:14:24.719710 [debug] [Thread-8 (]: On test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca: Close
+[0m16:14:24.722858 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.725795 [debug] [Thread-6 (]: Using postgres connection "test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41"
+[0m16:14:24.725795 [debug] [Thread-7 (]: On test.finvault.source_not_null_silver_transactions_transaction_id.6135437141: BEGIN
+[0m16:14:24.725795 [info ] [Thread-8 (]: 12 of 24 PASS source_not_null_gold_fact_transactions_txn_type_key .............. [[32mPASS[0m in 0.31s]
+[0m16:14:24.728884 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."fact_daily_account_balance" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.728884 [debug] [Thread-6 (]: On test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41: BEGIN
+[0m16:14:24.730815 [debug] [Thread-7 (]: Opening a new connection, currently in state closed
+[0m16:14:24.731828 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:14:24.731828 [debug] [Thread-8 (]: Finished running node test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca
+[0m16:14:24.731828 [debug] [Thread-6 (]: Opening a new connection, currently in state closed
+[0m16:14:24.733837 [debug] [Thread-8 (]: Began running node test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e
+[0m16:14:24.733837 [info ] [Thread-8 (]: 16 of 24 START test source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_  [RUN]
+[0m16:14:24.735673 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.finvault.source_not_null_gold_fact_transactions_txn_type_key.f5073876ca, now test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e)
+[0m16:14:24.735673 [debug] [Thread-8 (]: Began compiling node test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e
+[0m16:14:24.740180 [debug] [Thread-8 (]: Writing injected SQL for node "test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e"
+[0m16:14:24.740180 [debug] [Thread-8 (]: Began executing node test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e
+[0m16:14:24.746677 [debug] [Thread-8 (]: Writing runtime sql for node "test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e"
+[0m16:14:24.752804 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.752804 [debug] [Thread-6 (]: SQL status: BEGIN in 0.021 seconds
+[0m16:14:24.752804 [debug] [drc_1     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."fact_transactions"
+[0m16:14:24.752804 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.752804 [debug] [Thread-7 (]: SQL status: BEGIN in 0.025 seconds
+[0m16:14:24.752804 [debug] [Thread-6 (]: Using postgres connection "test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41"
+[0m16:14:24.752804 [debug] [drc_1     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.758882 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_not_null_silver_transactions_transaction_id.6135437141"
+[0m16:14:24.759789 [warn ] [Thread-5 (]: State adapter: Runtime error preparing enriched SQL for test 'source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.760468 [warn ] [Thread-8 (]: State adapter: Runtime error preparing enriched SQL for test 'source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_': Future cancelled. Continuing without state
+[0m16:14:24.761960 [debug] [Thread-6 (]: On test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select amount
+from "finvault"."silver"."transactions"
+where amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.762484 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."fact_transactions" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.762805 [debug] [Thread-7 (]: On test.finvault.source_not_null_silver_transactions_transaction_id.6135437141: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_not_null_silver_transactions_transaction_id.6135437141"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from "finvault"."silver"."transactions"
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.762805 [warn ] [Thread-5 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405': NoneType. Continuing without state
+[0m16:14:24.764127 [warn ] [Thread-8 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e': NoneType. Continuing without state
+[0m16:14:24.765307 [debug] [drc_1     ]: Opening a new connection, currently in state closed
+[0m16:14:24.766110 [debug] [Thread-5 (]: Using postgres connection "test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405"
+[0m16:14:24.766110 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e"
+[0m16:14:24.766829 [debug] [Thread-6 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m16:14:24.767779 [debug] [Thread-5 (]: On test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405: BEGIN
+[0m16:14:24.767779 [debug] [Thread-7 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m16:14:24.767779 [debug] [Thread-8 (]: On test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e: BEGIN
+[0m16:14:24.767779 [debug] [Thread-6 (]: On test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41: ROLLBACK
+[0m16:14:24.767779 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m16:14:24.767779 [debug] [Thread-7 (]: On test.finvault.source_not_null_silver_transactions_transaction_id.6135437141: ROLLBACK
+[0m16:14:24.767779 [debug] [Thread-8 (]: Opening a new connection, currently in state closed
+[0m16:14:24.767779 [debug] [Thread-6 (]: On test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41: Close
+[0m16:14:24.767779 [debug] [Thread-7 (]: On test.finvault.source_not_null_silver_transactions_transaction_id.6135437141: Close
+[0m16:14:24.776968 [info ] [Thread-6 (]: 13 of 24 PASS source_not_null_silver_transactions_amount ....................... [[32mPASS[0m in 0.13s]
+[0m16:14:24.777790 [info ] [Thread-7 (]: 14 of 24 PASS source_not_null_silver_transactions_transaction_id ............... [[32mPASS[0m in 0.13s]
+[0m16:14:24.781225 [debug] [Thread-6 (]: Finished running node test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41
+[0m16:14:24.781225 [debug] [Thread-7 (]: Finished running node test.finvault.source_not_null_silver_transactions_transaction_id.6135437141
+[0m16:14:24.781225 [debug] [Thread-6 (]: Began running node test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd
+[0m16:14:24.784300 [info ] [Thread-6 (]: 17 of 24 START test source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_  [RUN]
+[0m16:14:24.784300 [debug] [Thread-7 (]: Began running node test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd
+[0m16:14:24.786445 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.finvault.source_not_null_silver_transactions_amount.1fb8bd1e41, now test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd)
+[0m16:14:24.787278 [debug] [Thread-6 (]: Began compiling node test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd
+[0m16:14:24.787278 [info ] [Thread-7 (]: 18 of 24 START test source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_  [RUN]
+[0m16:14:24.796054 [debug] [Thread-6 (]: Writing injected SQL for node "test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd"
+[0m16:14:24.797092 [debug] [drc_1     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.798148 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly test.finvault.source_not_null_silver_transactions_transaction_id.6135437141, now test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd)
+[0m16:14:24.798148 [debug] [Thread-5 (]: SQL status: BEGIN in 0.027 seconds
+[0m16:14:24.798148 [debug] [Thread-8 (]: SQL status: BEGIN in 0.026 seconds
+[0m16:14:24.798148 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.800635 [debug] [Thread-7 (]: Began compiling node test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd
+[0m16:14:24.800635 [debug] [Thread-6 (]: Began executing node test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd
+[0m16:14:24.800635 [debug] [Thread-5 (]: Using postgres connection "test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405"
+[0m16:14:24.800635 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e"
+[0m16:14:24.809360 [debug] [Thread-7 (]: Writing injected SQL for node "test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd"
+[0m16:14:24.812997 [debug] [Thread-6 (]: Writing runtime sql for node "test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd"
+[0m16:14:24.814180 [debug] [Thread-5 (]: On test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select account_key as from_field
+    from "finvault"."gold"."fact_daily_account_balance"
+    where account_key is not null
+),
+
+parent as (
+    select account_key as to_field
+    from "finvault"."gold"."dim_account"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.814732 [debug] [Thread-8 (]: On test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select account_key as from_field
+    from "finvault"."gold"."fact_transactions"
+    where account_key is not null
+),
+
+parent as (
+    select account_key as to_field
+    from "finvault"."gold"."dim_account"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.815889 [debug] [Thread-7 (]: Began executing node test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd
+[0m16:14:24.820520 [debug] [Thread-5 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m16:14:24.820520 [debug] [Thread-8 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m16:14:24.820520 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."fact_transactions", "finvault"."gold"."dim_customer"
+[0m16:14:24.824972 [debug] [Thread-7 (]: Writing runtime sql for node "test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd"
+[0m16:14:24.827879 [debug] [Thread-5 (]: On test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405: ROLLBACK
+[0m16:14:24.828701 [debug] [Thread-8 (]: On test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e: ROLLBACK
+[0m16:14:24.828701 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.828701 [debug] [Thread-5 (]: On test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405: Close
+[0m16:14:24.837724 [debug] [drc_1     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."dim_transaction_type"
+[0m16:14:24.837724 [debug] [Thread-8 (]: On test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e: Close
+[0m16:14:24.837724 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."fact_transactions" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.837724 [info ] [Thread-5 (]: 15 of 24 PASS source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_  [[32mPASS[0m in 0.14s]
+[0m16:14:24.842223 [debug] [drc_1     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.842223 [info ] [Thread-8 (]: 16 of 24 PASS source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_  [[32mPASS[0m in 0.11s]
+[0m16:14:24.842223 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:14:24.844597 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."dim_transaction_type" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.844597 [debug] [Thread-5 (]: Finished running node test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405
+[0m16:14:24.844597 [debug] [Thread-8 (]: Finished running node test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e
+[0m16:14:24.844597 [debug] [drc_1     ]: Opening a new connection, currently in state closed
+[0m16:14:24.844597 [debug] [Thread-5 (]: Began running node test.finvault.source_unique_gold_dim_account_account_key.1624caf213
+[0m16:14:24.844597 [debug] [Thread-8 (]: Began running node test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704
+[0m16:14:24.850509 [info ] [Thread-5 (]: 19 of 24 START test source_unique_gold_dim_account_account_key ................. [RUN]
+[0m16:14:24.850509 [info ] [Thread-8 (]: 20 of 24 START test source_unique_gold_dim_customer_customer_key ............... [RUN]
+[0m16:14:24.853491 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.finvault.source_relationships_gold_fact_daily_account_balance_account_key__account_key__source_gold_dim_account_.231b487405, now test.finvault.source_unique_gold_dim_account_account_key.1624caf213)
+[0m16:14:24.855203 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.finvault.source_relationships_gold_fact_transactions_account_key__account_key__source_gold_dim_account_.82221c792e, now test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704)
+[0m16:14:24.857184 [debug] [Thread-5 (]: Began compiling node test.finvault.source_unique_gold_dim_account_account_key.1624caf213
+[0m16:14:24.857184 [debug] [Thread-8 (]: Began compiling node test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704
+[0m16:14:24.867239 [debug] [Thread-5 (]: Writing injected SQL for node "test.finvault.source_unique_gold_dim_account_account_key.1624caf213"
+[0m16:14:24.869912 [debug] [Thread-8 (]: Writing injected SQL for node "test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704"
+[0m16:14:24.869912 [debug] [drc_1     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.869912 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.875679 [debug] [Thread-5 (]: Began executing node test.finvault.source_unique_gold_dim_account_account_key.1624caf213
+[0m16:14:24.877364 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.877364 [debug] [Thread-8 (]: Began executing node test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704
+[0m16:14:24.878941 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.881793 [debug] [Thread-5 (]: Writing runtime sql for node "test.finvault.source_unique_gold_dim_account_account_key.1624caf213"
+[0m16:14:24.883514 [debug] [Thread-8 (]: Writing runtime sql for node "test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704"
+[0m16:14:24.885708 [warn ] [Thread-7 (]: State adapter: Runtime error preparing enriched SQL for test 'source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.885708 [warn ] [Thread-6 (]: State adapter: Runtime error preparing enriched SQL for test 'source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.889107 [warn ] [Thread-7 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd': NoneType. Continuing without state
+[0m16:14:24.897084 [debug] [drc_1     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."dim_account"
+[0m16:14:24.897084 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."dim_customer"
+[0m16:14:24.897084 [warn ] [Thread-6 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd': NoneType. Continuing without state
+[0m16:14:24.899929 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd"
+[0m16:14:24.899929 [debug] [drc_1     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.899929 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.899929 [debug] [Thread-6 (]: Using postgres connection "test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd"
+[0m16:14:24.899929 [debug] [Thread-7 (]: On test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd: BEGIN
+[0m16:14:24.899929 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."dim_account" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.899929 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."dim_customer" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.899929 [debug] [Thread-6 (]: On test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd: BEGIN
+[0m16:14:24.899929 [debug] [Thread-7 (]: Opening a new connection, currently in state closed
+[0m16:14:24.899929 [debug] [drc_1     ]: Opening a new connection, currently in state closed
+[0m16:14:24.899929 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:14:24.907615 [debug] [Thread-6 (]: Opening a new connection, currently in state closed
+[0m16:14:24.929206 [debug] [Thread-7 (]: SQL status: BEGIN in 0.022 seconds
+[0m16:14:24.929724 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.929724 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd"
+[0m16:14:24.932101 [debug] [Thread-6 (]: SQL status: BEGIN in 0.024 seconds
+[0m16:14:24.932101 [debug] [drc_1     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:24.932101 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.932101 [debug] [Thread-7 (]: On test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select txn_type_key as from_field
+    from "finvault"."gold"."fact_transactions"
+    where txn_type_key is not null
+),
+
+parent as (
+    select txn_type_key as to_field
+    from "finvault"."gold"."dim_transaction_type"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.934403 [debug] [Thread-6 (]: Using postgres connection "test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd"
+[0m16:14:24.934914 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:24.934914 [warn ] [Thread-8 (]: State adapter: Runtime error preparing enriched SQL for test 'source_unique_gold_dim_customer_customer_key': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.934914 [debug] [Thread-6 (]: On test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select customer_key as from_field
+    from "finvault"."gold"."fact_transactions"
+    where customer_key is not null
+),
+
+parent as (
+    select customer_key as to_field
+    from "finvault"."gold"."dim_customer"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.934914 [warn ] [Thread-5 (]: State adapter: Runtime error preparing enriched SQL for test 'source_unique_gold_dim_account_account_key': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:24.934914 [debug] [Thread-7 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m16:14:24.934914 [warn ] [Thread-8 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704': NoneType. Continuing without state
+[0m16:14:24.934914 [warn ] [Thread-5 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_unique_gold_dim_account_account_key.1624caf213': NoneType. Continuing without state
+[0m16:14:24.944053 [debug] [Thread-7 (]: On test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd: ROLLBACK
+[0m16:14:24.944053 [debug] [Thread-6 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m16:14:24.944053 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704"
+[0m16:14:24.946751 [debug] [Thread-5 (]: Using postgres connection "test.finvault.source_unique_gold_dim_account_account_key.1624caf213"
+[0m16:14:24.946751 [debug] [Thread-6 (]: On test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd: ROLLBACK
+[0m16:14:24.946751 [debug] [Thread-7 (]: On test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd: Close
+[0m16:14:24.946751 [debug] [Thread-8 (]: On test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704: BEGIN
+[0m16:14:24.950723 [debug] [Thread-5 (]: On test.finvault.source_unique_gold_dim_account_account_key.1624caf213: BEGIN
+[0m16:14:24.950723 [debug] [Thread-6 (]: On test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd: Close
+[0m16:14:24.950723 [info ] [Thread-7 (]: 18 of 24 PASS source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_  [[32mPASS[0m in 0.15s]
+[0m16:14:24.950723 [debug] [Thread-8 (]: Opening a new connection, currently in state closed
+[0m16:14:24.954400 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m16:14:24.954400 [info ] [Thread-6 (]: 17 of 24 PASS source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_  [[32mPASS[0m in 0.17s]
+[0m16:14:24.957446 [debug] [Thread-7 (]: Finished running node test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd
+[0m16:14:24.957955 [debug] [Thread-6 (]: Finished running node test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd
+[0m16:14:24.957955 [debug] [Thread-7 (]: Began running node test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81
+[0m16:14:24.960687 [debug] [Thread-6 (]: Began running node test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542
+[0m16:14:24.961660 [info ] [Thread-7 (]: 21 of 24 START test source_unique_gold_dim_date_date_key ....................... [RUN]
+[0m16:14:24.963434 [info ] [Thread-6 (]: 22 of 24 START test source_unique_gold_dim_transaction_type_txn_type_key ....... [RUN]
+[0m16:14:24.963434 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly test.finvault.source_relationships_gold_fact_transactions_txn_type_key__txn_type_key__source_gold_dim_transaction_type_.f8fe457ccd, now test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81)
+[0m16:14:24.966399 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.finvault.source_relationships_gold_fact_transactions_customer_key__customer_key__source_gold_dim_customer_.16103a89cd, now test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542)
+[0m16:14:24.966399 [debug] [Thread-7 (]: Began compiling node test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81
+[0m16:14:24.966399 [debug] [Thread-6 (]: Began compiling node test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542
+[0m16:14:24.970824 [debug] [Thread-7 (]: Writing injected SQL for node "test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81"
+[0m16:14:24.976511 [debug] [Thread-5 (]: SQL status: BEGIN in 0.023 seconds
+[0m16:14:24.977340 [debug] [Thread-6 (]: Writing injected SQL for node "test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542"
+[0m16:14:24.979553 [debug] [Thread-8 (]: SQL status: BEGIN in 0.026 seconds
+[0m16:14:24.979553 [debug] [Thread-5 (]: Using postgres connection "test.finvault.source_unique_gold_dim_account_account_key.1624caf213"
+[0m16:14:24.979553 [debug] [Thread-7 (]: Began executing node test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81
+[0m16:14:24.979553 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704"
+[0m16:14:24.979553 [debug] [Thread-5 (]: On test.finvault.source_unique_gold_dim_account_account_key.1624caf213: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_unique_gold_dim_account_account_key.1624caf213"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    account_key as unique_field,
+    count(*) as n_records
+
+from "finvault"."gold"."dim_account"
+where account_key is not null
+group by account_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.979553 [debug] [Thread-6 (]: Began executing node test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542
+[0m16:14:24.979553 [debug] [Thread-7 (]: Writing runtime sql for node "test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81"
+[0m16:14:24.979553 [debug] [Thread-8 (]: On test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_key as unique_field,
+    count(*) as n_records
+
+from "finvault"."gold"."dim_customer"
+where customer_key is not null
+group by customer_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:24.979553 [debug] [Thread-6 (]: Writing runtime sql for node "test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542"
+[0m16:14:24.979553 [debug] [Thread-5 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m16:14:24.991474 [debug] [Thread-8 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m16:14:24.992578 [debug] [drc_1     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."dim_date"
+[0m16:14:24.994040 [debug] [Thread-5 (]: On test.finvault.source_unique_gold_dim_account_account_key.1624caf213: ROLLBACK
+[0m16:14:24.995279 [debug] [Thread-8 (]: On test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704: ROLLBACK
+[0m16:14:24.995279 [debug] [drc_1     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.995279 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."dim_transaction_type"
+[0m16:14:24.995279 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."dim_date" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:24.995279 [debug] [Thread-8 (]: On test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704: Close
+[0m16:14:24.995279 [debug] [Thread-5 (]: On test.finvault.source_unique_gold_dim_account_account_key.1624caf213: Close
+[0m16:14:24.995279 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:24.995279 [debug] [drc_1     ]: Opening a new connection, currently in state closed
+[0m16:14:25.007224 [info ] [Thread-8 (]: 20 of 24 PASS source_unique_gold_dim_customer_customer_key ..................... [[32mPASS[0m in 0.15s]
+[0m16:14:25.008596 [info ] [Thread-5 (]: 19 of 24 PASS source_unique_gold_dim_account_account_key ....................... [[32mPASS[0m in 0.15s]
+[0m16:14:25.009109 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."dim_transaction_type" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:25.010664 [debug] [Thread-8 (]: Finished running node test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704
+[0m16:14:25.011859 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:14:25.011859 [debug] [Thread-5 (]: Finished running node test.finvault.source_unique_gold_dim_account_account_key.1624caf213
+[0m16:14:25.011859 [debug] [Thread-8 (]: Began running node test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549
+[0m16:14:25.011859 [debug] [Thread-5 (]: Began running node test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343
+[0m16:14:25.011859 [info ] [Thread-8 (]: 23 of 24 START test source_unique_gold_fact_transactions_transaction_id ........ [RUN]
+[0m16:14:25.011859 [info ] [Thread-5 (]: 24 of 24 START test source_unique_silver_transactions_transaction_id ........... [RUN]
+[0m16:14:25.016436 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.finvault.source_unique_gold_dim_customer_customer_key.c8074ca704, now test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549)
+[0m16:14:25.016436 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.finvault.source_unique_gold_dim_account_account_key.1624caf213, now test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343)
+[0m16:14:25.016436 [debug] [Thread-8 (]: Began compiling node test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549
+[0m16:14:25.016436 [debug] [Thread-5 (]: Began compiling node test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343
+[0m16:14:25.021619 [debug] [Thread-8 (]: Writing injected SQL for node "test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549"
+[0m16:14:25.027312 [debug] [Thread-5 (]: Writing injected SQL for node "test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343"
+[0m16:14:25.028564 [debug] [Thread-8 (]: Began executing node test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549
+[0m16:14:25.028564 [debug] [Thread-8 (]: Writing runtime sql for node "test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549"
+[0m16:14:25.028564 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:25.028564 [debug] [drc_1     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:25.028564 [debug] [Thread-5 (]: Began executing node test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343
+[0m16:14:25.028564 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:25.028564 [debug] [drc_1     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:25.028564 [debug] [drc_2     ]: State adapter: Fetching last_modified for tables: "finvault"."gold"."fact_transactions"
+[0m16:14:25.042173 [debug] [Thread-5 (]: Writing runtime sql for node "test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343"
+[0m16:14:25.042173 [warn ] [Thread-6 (]: State adapter: Runtime error preparing enriched SQL for test 'source_unique_gold_dim_transaction_type_txn_type_key': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:25.047084 [debug] [drc_2     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:25.044260 [warn ] [Thread-7 (]: State adapter: Runtime error preparing enriched SQL for test 'source_unique_gold_dim_date_date_key': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:25.049063 [warn ] [Thread-6 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542': NoneType. Continuing without state
+[0m16:14:25.049063 [debug] [drc_2     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."gold"."fact_transactions" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:25.051519 [debug] [drc_0     ]: State adapter: Fetching last_modified for tables: "finvault"."silver"."transactions"
+[0m16:14:25.051519 [warn ] [Thread-7 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81': NoneType. Continuing without state
+[0m16:14:25.051519 [debug] [Thread-6 (]: Using postgres connection "test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542"
+[0m16:14:25.051519 [debug] [drc_2     ]: Opening a new connection, currently in state closed
+[0m16:14:25.051519 [debug] [drc_0     ]: Using postgres connection "fetch_last_modified_timestamps_0"
+[0m16:14:25.051519 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81"
+[0m16:14:25.051519 [debug] [Thread-6 (]: On test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542: BEGIN
+[0m16:14:25.051519 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: SELECT CAST(EXTRACT(EPOCH FROM PG_XACT_COMMIT_TIMESTAMP(t.xmin)) * 1000 AS BIGINT) AS last_modified_epoch FROM "finvault"."silver"."transactions" AS t ORDER BY last_modified_epoch DESC NULLS LAST LIMIT 1
+[0m16:14:25.051519 [debug] [Thread-7 (]: On test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81: BEGIN
+[0m16:14:25.051519 [debug] [Thread-6 (]: Opening a new connection, currently in state closed
+[0m16:14:25.059325 [debug] [drc_0     ]: Opening a new connection, currently in state closed
+[0m16:14:25.059325 [debug] [Thread-7 (]: Opening a new connection, currently in state closed
+[0m16:14:25.065623 [debug] [drc_2     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:25.065623 [debug] [drc_2     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:25.065623 [warn ] [Thread-8 (]: State adapter: Runtime error preparing enriched SQL for test 'source_unique_gold_fact_transactions_transaction_id': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:25.065623 [warn ] [Thread-8 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549': NoneType. Continuing without state
+[0m16:14:25.076503 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549"
+[0m16:14:25.076503 [debug] [Thread-8 (]: On test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549: BEGIN
+[0m16:14:25.076503 [debug] [Thread-8 (]: Opening a new connection, currently in state closed
+[0m16:14:25.085811 [debug] [Thread-7 (]: SQL status: BEGIN in 0.029 seconds
+[0m16:14:25.085811 [debug] [Thread-6 (]: SQL status: BEGIN in 0.031 seconds
+[0m16:14:25.085811 [debug] [Thread-7 (]: Using postgres connection "test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81"
+[0m16:14:25.085811 [debug] [drc_0     ]: Postgres adapter: Postgres error: could not get commit timestamp data
+HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.
+
+[0m16:14:25.085811 [debug] [Thread-6 (]: Using postgres connection "test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542"
+[0m16:14:25.091677 [debug] [Thread-7 (]: On test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    date_key as unique_field,
+    count(*) as n_records
+
+from "finvault"."gold"."dim_date"
+where date_key is not null
+group by date_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:25.091677 [debug] [drc_0     ]: On fetch_last_modified_timestamps_0: Close
+[0m16:14:25.091677 [debug] [Thread-6 (]: On test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    txn_type_key as unique_field,
+    count(*) as n_records
+
+from "finvault"."gold"."dim_transaction_type"
+where txn_type_key is not null
+group by txn_type_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:25.094261 [warn ] [Thread-5 (]: State adapter: Runtime error preparing enriched SQL for test 'source_unique_silver_transactions_transaction_id': Database Error
+  could not get commit timestamp data
+  HINT:  Make sure the configuration parameter "track_commit_timestamp" is set.. Continuing without state
+[0m16:14:25.098008 [debug] [Thread-7 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m16:14:25.098008 [debug] [Thread-6 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m16:14:25.098008 [warn ] [Thread-5 (]: State adapter: Unexpected dbt State response type for test 'test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343': NoneType. Continuing without state
+[0m16:14:25.098008 [debug] [Thread-7 (]: On test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81: ROLLBACK
+[0m16:14:25.098008 [debug] [Thread-6 (]: On test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542: ROLLBACK
+[0m16:14:25.098008 [debug] [Thread-8 (]: SQL status: BEGIN in 0.026 seconds
+[0m16:14:25.098008 [debug] [Thread-5 (]: Using postgres connection "test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343"
+[0m16:14:25.098008 [debug] [Thread-8 (]: Using postgres connection "test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549"
+[0m16:14:25.098008 [debug] [Thread-7 (]: On test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81: Close
+[0m16:14:25.098008 [debug] [Thread-6 (]: On test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542: Close
+[0m16:14:25.107686 [debug] [Thread-5 (]: On test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343: BEGIN
+[0m16:14:25.107686 [debug] [Thread-8 (]: On test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "finvault"."gold"."fact_transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:25.109627 [info ] [Thread-7 (]: 21 of 24 PASS source_unique_gold_dim_date_date_key ............................. [[32mPASS[0m in 0.14s]
+[0m16:14:25.109627 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m16:14:25.109627 [info ] [Thread-6 (]: 22 of 24 PASS source_unique_gold_dim_transaction_type_txn_type_key ............. [[32mPASS[0m in 0.15s]
+[0m16:14:25.113203 [debug] [Thread-7 (]: Finished running node test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81
+[0m16:14:25.116717 [debug] [Thread-6 (]: Finished running node test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542
+[0m16:14:25.118472 [debug] [Thread-8 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m16:14:25.118472 [debug] [Thread-8 (]: On test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549: ROLLBACK
+[0m16:14:25.118472 [debug] [Thread-8 (]: On test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549: Close
+[0m16:14:25.118472 [info ] [Thread-8 (]: 23 of 24 PASS source_unique_gold_fact_transactions_transaction_id .............. [[32mPASS[0m in 0.10s]
+[0m16:14:25.122658 [debug] [Thread-8 (]: Finished running node test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549
+[0m16:14:25.152134 [debug] [Thread-5 (]: SQL status: BEGIN in 0.042 seconds
+[0m16:14:25.154147 [debug] [Thread-5 (]: Using postgres connection "test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343"
+[0m16:14:25.155901 [debug] [Thread-5 (]: On test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343: /* {"app": "dbt", "dbt_version": "1.9.11", "profile_name": "finvault", "target_name": "dev", "node_id": "test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "finvault"."silver"."transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:14:25.163305 [debug] [Thread-5 (]: SQL status: SELECT 1 in 0.007 seconds
+[0m16:14:25.165317 [debug] [Thread-5 (]: On test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343: ROLLBACK
+[0m16:14:25.165317 [debug] [Thread-5 (]: On test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343: Close
+[0m16:14:25.165317 [info ] [Thread-5 (]: 24 of 24 PASS source_unique_silver_transactions_transaction_id ................. [[32mPASS[0m in 0.15s]
+[0m16:14:25.173241 [debug] [Thread-5 (]: Finished running node test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343
+[0m16:14:25.176195 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:25.177378 [debug] [MainThread]: On master: BEGIN
+[0m16:14:25.177378 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:14:25.199897 [debug] [MainThread]: SQL status: BEGIN in 0.027 seconds
+[0m16:14:25.199897 [debug] [MainThread]: On master: COMMIT
+[0m16:14:25.199897 [debug] [MainThread]: Using postgres connection "master"
+[0m16:14:25.207598 [debug] [MainThread]: On master: COMMIT
+[0m16:14:25.207598 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m16:14:25.207598 [debug] [MainThread]: On master: Close
+[0m16:14:25.210629 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:14:25.210929 [debug] [MainThread]: Connection 'list_finvault_gold' was properly closed.
+[0m16:14:25.210929 [debug] [MainThread]: Connection 'test.finvault.source_unique_silver_transactions_transaction_id.31a6efe343' was properly closed.
+[0m16:14:25.212978 [debug] [MainThread]: Connection 'test.finvault.source_unique_gold_dim_transaction_type_txn_type_key.3b7444a542' was properly closed.
+[0m16:14:25.212978 [debug] [MainThread]: Connection 'test.finvault.source_unique_gold_dim_date_date_key.0dfa9c9a81' was properly closed.
+[0m16:14:25.212978 [debug] [MainThread]: Connection 'test.finvault.source_unique_gold_fact_transactions_transaction_id.6e7e3c8549' was properly closed.
+[0m16:14:25.214990 [debug] [MainThread]: Connection 'fetch_last_modified_timestamps_0' was properly closed.
+[0m16:14:25.214990 [debug] [MainThread]: Connection 'fetch_last_modified_timestamps_0' was properly closed.
+[0m16:14:25.214990 [debug] [MainThread]: Connection 'fetch_last_modified_timestamps_0' was properly closed.
+[0m16:14:25.217004 [info ] [MainThread]: 
+[0m16:14:25.218015 [info ] [MainThread]: Finished running 24 data tests in 0 hours 0 minutes and 5.60 seconds (5.60s).
+[0m16:14:25.222036 [debug] [MainThread]: Command end result
+[0m16:14:25.244817 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\manifest.json
+[0m16:14:25.244817 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\semantic_manifest.json
+[0m16:14:25.244817 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\godfr\OneDrive\Desktop\finvault-data-warehouse\dbt_project\target\run_results.json
+[0m16:14:25.244817 [info ] [MainThread]: 
+[0m16:14:25.244817 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:14:25.244817 [info ] [MainThread]: 
+[0m16:14:25.244817 [info ] [MainThread]: Done. PASS=24 WARN=0 ERROR=0 SKIP=0 TOTAL=24
+[0m16:14:25.258666 [debug] [MainThread]: Command `dbt test` succeeded at 16:14:25.258666 after 7.19 seconds
+[0m16:14:25.258666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066D210A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066D316510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002066CE37790>]}
+[0m16:14:25.258666 [debug] [MainThread]: Flushing usage events
+[0m16:14:26.953150 [debug] [MainThread]: An error was encountered while trying to flush usage events
